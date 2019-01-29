@@ -1,0 +1,5228 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>YSB Merchant Solutions API2 Guide</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+    <link rel="icon" type="image/png" href="https://sep.yimg.com/yf/common/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://sep.yimg.com/yf/common/favicon-16x16.png" sizes="16x16">
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;XML&quot;,&quot;shell&quot;,&quot;javascript&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+     <center><img src="images/logo.png" class="logo" alt="Logo" /></center>
+        <div class="lang-selector">
+              <a href="#" data-language-name="XML">XML</a>
+              <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="javascript">javascript</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#merchant-solutions-api-documentation" class="toc-h1 toc-link" data-title="Merchant Solutions API2 Documentation">Merchant Solutions API Documentation</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#order-and-payment-apis-overview" class="toc-h2 toc-link" data-title="Order and Payment APIs Overview">Order and Payment APIs Overview</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#order-apis" class="toc-h2 toc-link" data-title="Order APIs">Order APIs</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#payment-apis" class="toc-h2 toc-link" data-title="Payment APIs">Payment APIs</a>
+                      <li>
+              </ul>
+          </li>
+      </ul>
+          <li>
+            <a href="#security" class="toc-h1 toc-link" data-title="Security">Security</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#data-security-prerequisites" class="toc-h2 toc-link" data-title="Data Security Prerequisites">Data Security Prerequisites</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#authentication" class="toc-h2 toc-link" data-title="Authentication">Authentication</a>
+                      <li>
+              </ul>
+          </li>
+      </ul>
+          <li>
+            <a href="#requirements" class="toc-h1 toc-link" data-title="Requirements">Requirements</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#merchant-requirements" class="toc-h2 toc-link" data-title="Merchant Requirements">Merchant Requirements</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#partner-requirements" class="toc-h2 toc-link" data-title="Partner Requirements">Partner Requirements</a>
+                      <li>
+              </ul>
+          </li>
+      </ul>
+          <li>
+            <a href="#access-to-order-and-payment-apis" class="toc-h1 toc-link" data-title="Access to Order and Payment APIs">Access to Order and Payment APIs</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#partner-ids" class="toc-h2 toc-link" data-title="Partner IDs">Partner IDs</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#adding-a-partner-id-to-a-store-s-api-access-list" class="toc-h2 toc-link" data-title="Adding a Partner ID to a Store’s API Access List">Adding a Partner ID to a Store’s API Access List</a>
+                      <li>
+              </ul>
+          </li>
+      </ul>
+          <li>
+            <a href="#tokens" class="toc-h1 toc-link" data-title="Tokens">Tokens</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#token-renewals" class="toc-h2 toc-link" data-title="Token Renewals">Token Renewals</a>
+                      <li>
+                     <ul class="toc-list-h3">
+                        </li>
+                        </li>
+                  </li>
+              </ul>
+                  <li>
+                    <a href="#revoking-tokens" class="toc-h2 toc-link" data-title="Revoking Tokens">Revoking Tokens</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#merchant-revokes-partner-token" class="toc-h2 toc-link" data-title="Merchant Revokes Partner Token">Merchant Revokes Partner Token</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#partner-revokes-partner-token" class="toc-h2 toc-link" data-title="Partner Revokes Partner Token">Partner Revokes Partner Token</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#token-expiry-dates" class="toc-h2 toc-link" data-title="Token Expiry Dates">Token Expiry Dates</a>
+                      <li>
+              </ul>
+          </li>
+      </ul>
+          <li>
+            <a href="#glossary" class="toc-h1 toc-link" data-title="Glossary">Glossary</a>
+      </ul>
+          <li>
+            <a href="#contact-information" class="toc-h1 toc-link" data-title="Contact Information">Contact Information</a>
+      </ul>
+          <li>
+            <a href="#other-resources" class="toc-h1 toc-link" data-title="Other Resources">Other Resources</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#apis" class="toc-h2 toc-link" data-title="APIs">APIs</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#payment-processing" class="toc-h2 toc-link" data-title="Payment Processing">Payment Processing</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#rest" class="toc-h2 toc-link" data-title="REST">REST</a>
+                      <li>
+              </ul>
+          </li>
+      </ul>
+          <li>
+            <a href="#order-and-payment-apis" class="toc-h1 toc-link" data-title="Order and Payment APIs">Order and Payment APIs</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#common-elements" class="toc-h2 toc-link" data-title="Common Elements">Common Elements</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#non-bulk" class="toc-h2 toc-link" data-title="Non-Bulk">Non-Bulk</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#bulk" class="toc-h2 toc-link" data-title="Bulk">Bulk</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#errors" class="toc-h2 toc-link" data-title="Errors">Errors</a>
+                      <li>
+              </ul>
+          </li>
+      </ul>
+          <li>
+            <a href="#order-api-non-bulk" class="toc-h1 toc-link" data-title="Order API - Non Bulk">Order API - Non Bulk</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#order" class="toc-h2 toc-link" data-title="Order">Order</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#update-order" class="toc-h2 toc-link" data-title="Update Order">Update Order</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#error-code" class="toc-h2 toc-link" data-title="Error Code">Error Code</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#orderlistquery" class="toc-h2 toc-link" data-title="OrderListQuery">OrderListQuery</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#get-order" class="toc-h2 toc-link" data-title="Get Order">Get Order</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#get-range" class="toc-h2 toc-link" data-title="Get Range">Get Range</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#getintervalrange" class="toc-h2 toc-link" data-title="GetIntervalRange">GetIntervalRange</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#getcountedrange" class="toc-h2 toc-link" data-title="GetCountedRange">GetCountedRange</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#error-codes" class="toc-h2 toc-link" data-title="Error Codes">Error Codes</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#customorderstatus" class="toc-h2 toc-link" data-title="CustomOrderStatus">CustomOrderStatus</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#create-new-custom-status" class="toc-h2 toc-link" data-title="Create New Custom Status">Create New Custom Status</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#update-custom-status" class="toc-h2 toc-link" data-title="Update Custom Status">Update Custom Status</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#error-codes-2" class="toc-h2 toc-link" data-title="Error Codes">Error Codes</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#customorderstatuslistquery" class="toc-h2 toc-link" data-title="CustomOrderStatusListQuery">CustomOrderStatusListQuery</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#getcustomstatus" class="toc-h2 toc-link" data-title="GetCustomStatus">GetCustomStatus</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#error-codes-3" class="toc-h2 toc-link" data-title="Error Codes">Error Codes</a>
+                      <li>
+              </ul>
+          </li>
+      </ul>
+          <li>
+            <a href="#payment-api-non-bulk" class="toc-h1 toc-link" data-title="Payment API - Non Bulk">Payment API - Non Bulk</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#order-transactionlist" class="toc-h2 toc-link" data-title="Order/TransactionList">Order/TransactionList</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#auth" class="toc-h2 toc-link" data-title="Auth">Auth</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#sale" class="toc-h2 toc-link" data-title="Sale">Sale</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#credit" class="toc-h2 toc-link" data-title="Credit">Credit</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#voidauth" class="toc-h2 toc-link" data-title="VoidAuth">VoidAuth</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#reauth" class="toc-h2 toc-link" data-title="Reauth">Reauth</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#reverseauth" class="toc-h2 toc-link" data-title="ReverseAuth">ReverseAuth</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#reverseauth-error-codes" class="toc-h2 toc-link" data-title="ReverseAuth Error Codes">ReverseAuth Error Codes</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#batchlistquery" class="toc-h2 toc-link" data-title="BatchListQuery">BatchListQuery</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#batchstatus" class="toc-h2 toc-link" data-title="BatchStatus">BatchStatus</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#batchstatusdays" class="toc-h2 toc-link" data-title="BatchStatusDays">BatchStatusDays</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#batchstatusid" class="toc-h2 toc-link" data-title="BatchStatusID">BatchStatusID</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#payment-api-non-bulk-error-codes" class="toc-h2 toc-link" data-title="Payment API - Non Bulk Error Codes">Payment API - Non Bulk Error Codes</a>
+                      <li>
+              </ul>
+          </li>
+      </ul>
+          <li>
+            <a href="#payment-api-bulk" class="toc-h1 toc-link" data-title="Payment API - Bulk">Payment API - Bulk</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#orderlist-order-transactionlist" class="toc-h2 toc-link" data-title="OrderList/Order/TransactionList">OrderList/Order/TransactionList</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#sale-2" class="toc-h2 toc-link" data-title="Sale">Sale</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#voidsale" class="toc-h2 toc-link" data-title="VoidSale">VoidSale</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#credit-2" class="toc-h2 toc-link" data-title="Credit">Credit</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#voidcredit" class="toc-h2 toc-link" data-title="VoidCredit">VoidCredit</a>
+                      <li>
+              </ul>
+                  <li>
+                    <a href="#bulk-error-codes" class="toc-h2 toc-link" data-title="Bulk Error Codes">Bulk Error Codes</a>
+                      <li>
+              </ul>
+          </li>
+      </ul>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://sep.yimg.com/ty/cdn/vw/order-payment-api-100313.pdf'>API Instructions</a></li>
+            <li><a href='https://help.smallbusiness.yahoo.net/s/'>Documentation Powered by YSB/Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='merchant-solutions-api-documentation'>Merchant Solutions API Documentation</h1><h2 id='order-and-payment-apis-overview'>Order and Payment APIs Overview</h2>
+<p>Yahoo Merchant Solutions Order and Payment APIs are designed to open up the Store as a platform, to
+provide merchants using external Order Management Systems (OMS) with customized order and
+payment processing solutions. Previously, integration with an external OMS lacked enough API resources
+for maintaining synchronous communication between order and payment processing systems. </p>
+
+<p>Order and Payment APIs are designed to satisfy this need, allowing you to maintain synchronous communication
+between third-party order management systems and your Yahoo Store, to ensure that order information
+is current in both systems. Order and Payment APIs also provide batch-processing capabilities, which
+allow actions on multiple orders at the same time, rather than on a per-order basis.</p>
+<h2 id='order-apis'>Order APIs</h2>
+<p>The Order API package includes sets of non-bulk APIs for order processing and custom order status
+creation. Order APIs enable partners to update order information, retrieve order information, and to get
+information about a range of orders. Custom Order Status operations enable new custom order statuses to
+be created, and allow for updating and retrieving information about these statuses. Call responses for all
+order processing APIs are synchronous in nature.</p>
+<h2 id='payment-apis'>Payment APIs</h2>
+<p>The Payment API package includes sets of both bulk and non-bulk APIs for payment processing and
+transaction queries. As the APIs support FDMS and PayPal payment transactions, merchants are
+required to have either FDMS-compatible or PayPal payment processors. Payment APIs neither add to
+nor subtract from current payment processor functionality.</p>
+
+<p>Non-bulk APIs support single transactions, with operations performed in synchronous mode. Bulk APIs
+support multiple transactions, and use batch queues. Operations are performed in asynchronous mode.</p>
+<h1 id='security'>Security</h1><h2 id='data-security-prerequisites'>Data Security Prerequisites</h2>
+<p>Yahoo is committed to the security of store data. To ensure data security, all web service calls are to be
+made over an HTTPS connection secured by 128-bit SSL v3, or a TLS connection. Please note that SSL
+v2 is not supported or allowed.</p>
+<h2 id='authentication'>Authentication</h2>
+<p>Access to Order and Payment APIs must be restricted to authenticated and authorized partners only.
+Each time a partner makes a call, they must be recognized as having valid access to do so. All web
+service APIs that access a store’s data require a partner access token (contract token) to be included.</p>
+
+<p>Should a contract token become compromised, the token may be revoked by the merchant or the partner.
+Although a new token may be generated for the partner, it is the responsibility of the partner to protect their
+tokens from being exposed to outside parties. Please see section 4 of the Getting Started Guide for more
+information about partner tokens.</p>
+<h1 id='requirements'>Requirements</h1><h2 id='merchant-requirements'>Merchant Requirements</h2>
+<p>In order to use Order and Payment APIs, merchants must have a Yahoo Merchant Solutions Standard,
+Professional, or Yahoo Store account, and be open for business. To use Payment APIs, merchants must
+have either an FDMS-compatible or PayPal payment processor.</p>
+
+<p>To find out more about setting up payment processing, please see:
+* Merchant Account Application and Set Up
+* Payment Processing – See How It Works
+* Payment Processing Glossary</p>
+<h2 id='partner-requirements'>Partner Requirements</h2>
+<p>Partners must apply and be approved for a Partner ID, in order for merchants to grant them Order and
+Payment APIs access for their Yahoo Store. Partners must also be supplied with a partner access token for
+each individual store they have been provisioned with API access to, in order to make web service calls.</p>
+
+<p>To learn how to apply for a Partner ID, please see section 3.1. For information about partner access
+tokens, please see section 4.</p>
+<h1 id='access-to-order-and-payment-apis'>Access to Order and Payment APIs</h1>
+<p>In order to make API calls, a user must have a Partner ID, and be added to a Yahoo store’s access list.
+This is true of both partners who will make API calls on behalf of the merchant, and of merchants who
+wish to make their own API calls.</p>
+<h2 id='partner-ids'>Partner IDs</h2>
+<p>All users must have a Partner ID, whether they are a partner or the store merchant. Partner IDs are
+supplied by Yahoo upon approval of an Application for Partner Access.</p>
+
+<p>To apply for a Partner ID:</p>
+
+<ol>
+<li>Access https://apipartners.store.yahoo.com/.</li>
+<li><p>Complete the Application for Partner Access form. This form requires the following information:</p>
+
+<ul>
+<li>Yahoo ID</li>
+<li>Developer or company name</li>
+<li>Address</li>
+<li>Email address where tokens should be sent</li>
+<li>Contact name</li>
+<li>Phone number (optional)</li>
+<li>Description of application (e.g., order management system, or in the case of merchants,please note you are a merchant         who wishes to make your own Order and Payment API calls)</li>
+</ul></li>
+<li><p>Submit the Application for Partner Access form. This application will be reviewed by Yahoo. Approved applicants will be        notified via email and sent a Partner ID.</p></li>
+</ol>
+
+<p><img src="images/app_part_acess.png" alt="render Graph 1" /></p>
+
+<p>Partners must provide Yahoo Store merchants whose stores they wish to make API calls for with their
+Partner ID, so the merchant may add them to their store’s API access list.</p>
+<h2 id='adding-a-partner-id-to-a-store-s-api-access-list'>Adding a Partner ID to a Store’s API Access List</h2>
+<p>Once a merchant has been provided with a partner’s Partner ID, they may add this user to their store’s
+API access list, which will grant the partner access to make API calls for their store. If the merchant
+wishes to make their own API calls, they may add their own Partner ID to their store’s API access list.</p>
+
+<ol>
+<li>In Store Manager, click the “Real-Time Links” link, located in the Order Settings column.</li>
+<li>Click the “API Settings” link.</li>
+<li>In the API Settings section, click the “Add New Partner” button.</li>
+<li>Enter the Partner ID, then click “Next“.</li>
+<li>Accept the Terms of Service.</li>
+</ol>
+
+<p>Once the partner ID has been added, a partner access token will be generated and sent via email to the
+user whose partner ID has been added.</p>
+<h1 id='tokens'>Tokens</h1>
+<p>When a Partner ID is added to a store’s API access list, the token generated is valid for a one-year
+period. After a token has been generated, it may be managed by both merchants and partners.</p>
+<h2 id='token-renewals'>Token Renewals</h2>
+<p>When a token is coming up for expiry, either the merchant or the partner must renew this token, in order
+for the partner to have continued access to make API calls for the store the token is associated with.</p>
+<h3 id='merchant-renews-partner-token'>Merchant Renews Partner Token</h3>
+<p>Merchants may renew partner tokens using the API Settings tool, located in the Real-Time Links section of
+Store Manager. Once partner access is renewed, a new token will be generated for the partner. New token
+information will be sent to the partner via email. Please note that the partner must begin using this new
+token before the original partner token expires. Continuing to use the original partner token after its expiry
+date will result in failed API calls.</p>
+
+<ol>
+<li>In Store Manager, click the “Real-Time Links” link, located in the Order Settings column.</li>
+<li>Click the “API Settings” link.</li>
+<li>In the API Settings section, select the partner token you wish to renew, using the corresponding
+“Select” checkbox.</li>
+<li>Click the “Renew Selected” button.A Renew Partner Token(s) dialogue box will open. Here, you can set a custom expiry date for the new token, using the calendar widget. Tokens may be set to expire a minimum of one day from the token renewal date, up to a maximum of five years from the token renewal date. If a custom expiry date is not selected, the token expiry date will be one year from the date of token renewal, default.</li>
+<li>Click the “Renew” button.</li>
+</ol>
+
+<p>A new partner token will be generated, and appear in the token list marked as “New.” The original token
+   will be marked as “Renewed.” New token information will be sent to the partner via email, and the
+   merchant will be notified of the token renewal via email.</p>
+<h3 id='partner-renews-partner-token'>Partner Renews Partner Token</h3>
+<p>Partners may renew their partner tokens using the Manage Partner Tokens tool.</p>
+
+<ol>
+<li>Log in to the Manage Partner Tokens tool, at the following URL: https://apipartners.store.yahoo.com/. </li>
+<li>All active tokens are listed in the “Active Tokens” tab. Tokens expiring within the next 30 days are also listed in the “Expiring Tokens” tab. Select the token(s) you wish to renew using the corresponding “Select” checkbox.</li>
+<li><p>Click the “Renew Selected” button.  A Renew Partner Token(s) dialogue box will open. Here, you can set a custom expiry date for the new token, using the calendar widget. Tokens may be set to expire a minimum of one day from the token renewal date, up to a maximum of five years from the token renewal date. If a custom expiry date is not selected, the token expiry date will be one year from the date of token renewal, by default.</p></li>
+<li><p>Click the “Renew” button.</p></li>
+</ol>
+
+<p>A partner token will be generated, and appear in the token list marked as “New.” The original token marked as “Renewed.” New token information will be sent to the partner via email, and the merchant will be notified of the token renewal via email.</p>
+<h2 id='revoking-tokens'>Revoking Tokens</h2>
+<p>Yahoo Merchant Solutions — Order and Payment APIs: Getting Started Guide (October 3, 2013) 7
+For several reasons, both merchants and partners may wish to revoke partner access tokens. Common
+reasons for revoking tokens include the partner no longer requiring access to make API calls for a store; a
+token becoming compromised; or the desire to change a token expiry date after a new token has been
+issued. Both the merchant and partner have the ability to revoke tokens.</p>
+<h2 id='merchant-revokes-partner-token'>Merchant Revokes Partner Token</h2>
+<p>Merchants may revoke partner tokens using the API Settings Tool, located in the Real-Time Links section of
+Store Manager.</p>
+
+<ol>
+<li>In Store Manager, click the &quot;Real-Time Links&quot; link, located in the Order Settings column.</li>
+<li>Click the &quot;API Settings&quot; link.</li>
+<li>In the API Settings section, select the partner token you wish to revoke, using the corresponding
+&quot;Select&quot; checkbox.</li>
+<li>Click the &quot;Revoke Selected&quot; button. You will be asked to confirm that you wish to revoke the
+selected token. Click the &quot;Revoke&quot; button.</li>
+</ol>
+
+<p>Once a token is revoked, it may no longer be used to make API calls. If the partner whose token you have
+revoked has more than one valid (non-expired) token associated with your store (for example, their
+original token and the renewed token, and you&#39;ve revoked the renewed token), and you no longer wish for
+the partner to have API access for your store, it is recommended that any additional valid tokens for the
+partner also be revoked.</p>
+<h2 id='partner-revokes-partner-token'>Partner Revokes Partner Token</h2>
+<p>Partners may revoke their partner tokens using the Manage Partner Tokens tool.</p>
+
+<ol>
+<li>Log in to the Manage Partner Tokens tool, at the following URL:
+https://apipartners.store.yahoo.com/.</li>
+<li>In the &quot;Active Tokens&quot; tab, select the token you wish to revoke using the corresponding &quot;Select&quot;
+checkbox.</li>
+<li>Click the &quot;Revoke Selected&quot; button.</li>
+<li>You will be asked to confirm that you wish to revoke the selected token. Click the &quot;Revoke
+Token(s)&quot; button.</li>
+</ol>
+<h2 id='token-expiry-dates'>Token Expiry Dates</h2>
+<p>The original token generated for a partner is valid for one year. The expiry date for this token cannot be
+edited. Should you wish to grant a partner API access for longer than one year, and do not wish to wait
+until the original token is near expiry, you may renew the original token and set the expiry date for any
+time up to 5 years from the date of token renewal.</p>
+
+<p>When you renew a token, you may set a custom token expiry date at the time of renewal. If you do not
+provide a custom expiry date, the default expiry date will be one year from the date of token renewal. This
+date cannot be edited once a token has been renewed. Should you wish to set a different expiry date for
+a partner access token, you may revoke the token, then renew the original token again and set the expiry date.</p>
+<h1 id='glossary'>Glossary</h1>
+<p>See also:</p>
+
+<p>## Payment Processing Glossary</p>
+
+<p><strong>Address Verification Service (AVS)</strong>: With AVS, the billing address provided by the buyer during checkout
+is validated against the billing address on file at the customer&#39;s card issuing bank or credit card
+association. The AVS response is added to the authorization response.</p>
+
+<p><strong>Asynchronous</strong>: Asynchronous operations do not occur in real-time. Bulk APIs perform operations in
+asynchronous mode, using batches.</p>
+
+<p><strong>Batch</strong>: A collection of transactions. Note: PayPal transactions are settled immediately, and do not use
+batches.</p>
+
+<p><strong>Batch ID</strong>: The identification number assigned to each batch by the payment processor, after settlement.</p>
+
+<p><strong>Card Verification Value (CVV)</strong>: The three-digit code printed in the signature panel on the back of Visa/
+MasterCard/Discover (a four digit code printed on the front for American Express).</p>
+
+<p><strong>Partner Access Token (Contract Token)</strong>: A partner access token is generated for a partner and sent to
+them via email once a merchant has added the Partner ID to the API access list for their store. A valid
+partner access token must be used in all web service calls made for the store.</p>
+
+<p><strong>Partner ID</strong>: A unique identifying code used to add partners to Yahoo Store API access lists. Partners
+apply and be approved for a Partner ID in order to use Yahoo Merchant Solutions Web Services and
+APIs, then supply this Partner ID to merchants. Without a valid partner ID, a merchant cannot add a
+partner to their store’s API access list.</p>
+
+<p><strong>REST</strong>: Representational State Transfer (REST). REST operates on resource-oriented services. Order
+and Payment APIs follow general REST style, but use POST methods.</p>
+
+<p><strong>SSL</strong>: SSL, or Secure Sockets Layer, is a protocol used for transmitting private data, which encrypts the
+data sent. Order and Payment APIs support 128-bit SSL v3.</p>
+
+<p><strong>Synchronous</strong>: Synchronous operations occur in real time. Non-Bulk APIs perform operations in
+synchronous mode.</p>
+<h1 id='contact-information'>Contact Information</h1>
+<p>For technical inquiries, please contact Yahoo Customer Care.
+Yahoo Merchant Solutions — Order and Payment APIs: Getting Started Guide </p>
+<h1 id='other-resources'>Other Resources</h1><h2 id='apis'>APIs</h2>
+<ul>
+<li>Order and Payment APIs: Reference Guide (section B of this document)</li>
+<li>Yahoo Developer Network</li>
+</ul>
+<h2 id='payment-processing'>Payment Processing</h2>
+<ul>
+<li>Merchant Account Application and Set Up</li>
+<li>Payment Processing – See How It Works</li>
+<li>Payment Processing Glossary</li>
+</ul>
+<h2 id='rest'>REST</h2>
+<ul>
+<li>Representational State Transfer in the Wikipedia</li>
+</ul>
+<h1 id='order-and-payment-apis'>Order and Payment APIs</h1>
+<p>This document is intended as a reference guide to outline details of Order and Payment APIs.
+Documentation for each API has been ordered by Non-Bulk and Bulk APIs, with information listed by
+resource. The documentation for each resource includes the resource’s allowed verbs, URLs and
+methods, request and response fields, sample XML, and error codes.</p>
+
+<p>Please note: URLs provided in this document are case-sensitive and format-sensitive. Trailing slashes
+(“/”) should not be added to the end of a URL unless otherwise indicated.</p>
+
+<p>For additional information about Yahoo Merchant Solutions’ Order and Payment APIs, please see Section
+A of this document: Order and Payment APIs: Getting Started. This section includes overviews, security
+information, merchant and partner getting started information, and further resources you may wish to
+consult.</p>
+<h2 id='common-elements'>Common Elements</h2>
+<p>This section makes note of information common to Non-Bulk and Bulk APIs, respectively. For resourcespecific
+information, please consult the resource documentation provided in sections of this guide.</p>
+
+<ul>
+<li>Order API - No Bulk</li>
+<li>Payment API - Non-Bulk</li>
+<li>Payment API - Bulk</li>
+</ul>
+<h2 id='non-bulk'>Non-Bulk</h2>
+<p>Non-Bulk APIs support single transactions, with operations performed in synchronous mode.</p>
+
+<p>Request XML for each non-bulk resource has the following common structure, where the ResourceList
+element encloses the resource being operated upon. The get, update, or create verbs can each be
+used, depending upon the operation being performed</p>
+<pre class="highlight shell tab-shell"><code>&lt;?xml <span class="nv">version</span><span class="o">=</span><span class="s2">"1.0"</span> <span class="nv">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span>?&gt;
+&lt;ystorewsRequest&gt;
+<span class="gp">&lt;StoreID&gt; </span>yhst-1234567890 &lt;/StoreID&gt;
+&lt;SecurityHeader&gt;
+&lt;PartnerStoreContractToken&gt;Value of the contract token&lt;/PartnerStoreContractToken&gt;
+&lt;/SecurityHeader&gt;
+<span class="gp">&lt;Version&gt; </span>1.0 &lt;/Version&gt;
+<span class="gp">&lt;Verb&gt; </span>get/update/create &lt;/Verb&gt;
+&lt;ResourceList&gt;
+&lt;/ResourceList&gt;
+&lt;/ystorewsRequest&gt;
+</code></pre><h2 id='bulk'>Bulk</h2>
+<p>Bulk APIs work using batch queues, and are able to process multiple transactions. Operations are
+performed in asynchronous mode.</p>
+
+<p>Request XML for each bulk resource has the following common structure, where the ResourceList element
+encloses the resource being operated upon. The get, update, or create verbs can each be used,
+depending upon the operation being performed.</p>
+<pre class="highlight xml tab-xml"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;ystorewsBulkRequest&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span> yhst-1234567890 <span class="nt">&lt;/StoreID&gt;</span>
+Yahoo Merchant Solutions — Order and Payment APIs: Reference Guide (October 3, 2013) 1
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;</span>Value of the contract token<span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;Verb&gt;</span> get/update/create <span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsBulkRequest&gt;</span>
+</code></pre><h2 id='errors'>Errors</h2>
+<p><strong>Global HTTP errors</strong>:
+The following list of HTTP error codes are returned by all APIs: </p>
+
+<ul>
+<li>HTTP_OK</li>
+<li>HTTP_BAD_REQUEST</li>
+<li>HTTP_NOT_FOUND</li>
+<li>HTTP_INTERNAL_SERVER_ERROR</li>
+<li>HTTP_CREATED</li>
+<li>HTTP_SERVICE_UNAVAILABLE</li>
+<li>HTTP_GATEWAY_TIME_OUT</li>
+</ul>
+
+<p><strong>Application error codes</strong>:
+The error codes and messages listed below are generic errors that may be returned by all APIs. Errors
+specific to individual resources are provided in the resource documentation.</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>10001</td>
+<td>Please, provide a valid Verb.</td>
+</tr>
+<tr>
+<td>10002</td>
+<td>This operation is not permitted.</td>
+</tr>
+<tr>
+<td>10003</td>
+<td>There is no resource supplied for the request.</td>
+</tr>
+<tr>
+<td>10004</td>
+<td>Order id not found in store.</td>
+</tr>
+<tr>
+<td>10006</td>
+<td>Request exceeds the maximum number of concurrent requests allowed for store. Please, try again later.</td>
+</tr>
+<tr>
+<td>10009</td>
+<td>Authorization required.</td>
+</tr>
+<tr>
+<td>10010</td>
+<td>Access denied.</td>
+</tr>
+<tr>
+<td>10500</td>
+<td>An Internal error has occurred.</td>
+</tr>
+</tbody></table>
+<h1 id='order-api-non-bulk'>Order API - Non Bulk</h1>
+<p>All Order APIs operate in Non-Bulk mode, using the following resources and verbs:</p>
+
+<table><thead>
+<tr>
+<th>Resource Name</th>
+<th>Allowed Verb(s)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Order</td>
+<td>get, update</td>
+</tr>
+<tr>
+<td>OrderListQuery</td>
+<td>get</td>
+</tr>
+<tr>
+<td>CustomOrderStatus</td>
+<td>create, update</td>
+</tr>
+<tr>
+<td>CustomOrderStatusListQuery</td>
+<td>get</td>
+</tr>
+</tbody></table>
+
+<p>The system defined status IDs listed below are exposed to Order API users:</p>
+
+<table><thead>
+<tr>
+<th>Status ID</th>
+<th>Status Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>0</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Fradulent</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Cancelled</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Returned</td>
+</tr>
+<tr>
+<td>4</td>
+<td>On Hold</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Pending Review</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Partially Shipped</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Fully Shipped</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Tracked</td>
+</tr>
+<tr>
+<td>16-112</td>
+<td>Custom Status ID</td>
+</tr>
+</tbody></table>
+
+<p>Error responses are returned using the following common structure:</p>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Error/Code</td>
+<td>The numerical code assigned to the error</td>
+</tr>
+<tr>
+<td>Error/Message</td>
+<td>The error message corresponding to the error code, explaining the error that has occurred</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Sample error response for Non-Bulk API requests:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;ystorews:ystorewsResponse</span> <span class="na">xmlns:ystorews=</span><span class="s">"urn:yahoo:sbs:ystorews"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span> RequestID-1190608113568493 <span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;ErrorResourceList&gt;</span>
+<span class="nt">&lt;Error&gt;</span>
+<span class="nt">&lt;Code&gt;</span> 10500 <span class="nt">&lt;/Code&gt;</span>
+<span class="nt">&lt;Message&gt;</span> Internal Error <span class="nt">&lt;/Message&gt;</span>
+<span class="nt">&lt;/Error&gt;</span>
+<span class="nt">&lt;/ErrorResourceList&gt;</span>
+<span class="nt">&lt;/ystorews:ystorewsResponse&gt;</span>
+</code></pre><h2 id='order'>Order</h2>
+<p>The Update Order operation may currently be performed on the Order resource.</p>
+<h2 id='update-order'>Update Order</h2>
+<p>The Update Order operation is used to update desired information about a particular order. Currently,
+only certain fields are supported for updates.</p>
+
+<aside class="notice">
+Note about updating an order with status #'s 6, 7 or 8:
+
+Users may not mark an order with any of the above statuses (6, 7 or 8) directly. Shipment information for
+the order should instead be updated, which will then mark the order with any of these statuses.</aside>
+
+<aside class="notice">
+Note about updating an order with custom status:
+
+Users wishing to mark an order with a custom status should first create a custom status using the
+CustomOrderStatus operation. Once created, the custom status ID may be used to mark any number of
+orders.</aside>
+
+<p><strong>Note for updating shipment information</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Number of items in an order</th>
+<th>Type of shipment update allowed</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>CartShipmentInfo only</td>
+</tr>
+<tr>
+<td>More than 1</td>
+<td>Either CartShipmentInfo or multiple ItemShipmentInfo(s). These should not coexist in a request.</td>
+</tr>
+</tbody></table>
+
+<p><strong>REST based URL</strong>: https://<storeid>.order.store.yahooapis.com/V1/order</p>
+
+<p><strong>Method</strong>: POST</p>
+
+<p><strong>Request fields</strong>:</p>
+
+<p><strong>Input</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Order/OrderID</td>
+<td>String</td>
+<td>Required</td>
+<td>Valid order ID</td>
+<td>Order number</td>
+</tr>
+<tr>
+<td>Order/StatusList</td>
+<td>XML element</td>
+<td>Optional</td>
+<td>N/A</td>
+<td>Status with which to update an order</td>
+</tr>
+<tr>
+<td>Order/CartShipmentInfo</td>
+<td>XML element</td>
+<td>Optional</td>
+<td>N/A</td>
+<td>Shipment information for the order as a whole</td>
+</tr>
+<tr>
+<td>Order/ShipToInfo</td>
+<td>String</td>
+<td>Optional</td>
+<td>Valid N/A</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>Order/BillToInfo</td>
+<td>XML element</td>
+<td>Optional</td>
+<td>N/A</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>Order/PayPalReviewInfo</td>
+<td>XML element</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Information about PayPal Payment Review</td>
+</tr>
+<tr>
+<td>Order/BuyerEmail</td>
+<td>String</td>
+<td>Optional</td>
+<td>Valid email ID</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>Order/ItemList</td>
+<td>XML element</td>
+<td>Optional</td>
+<td>N/A</td>
+<td>Shipment information on a per item basis</td>
+</tr>
+<tr>
+<td>Order/CreationTime</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>Order/OrderTotals</td>
+<td>XML elements</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>Order/Referer</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>Order/MerchantNotes</td>
+<td>String</td>
+<td>Optionnal</td>
+<td>Consult XSD</td>
+<td>Adds the given note to the existing notes in the order</td>
+</tr>
+<tr>
+<td>Order/EntryPoint</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>Valid order ID</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>Order/BuyerComments</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>Order/PaymentProcessor</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>Order/Currency</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Currency used (for example, USD)</td>
+</tr>
+<tr>
+<td>Order/ShipMethod</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Self explanatory</td>
+</tr>
+</tbody></table>
+
+<p><strong>StatusList</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Order/StatusList/OrderStatus</td>
+<td>XML element</td>
+<td>Required (only 1 in number)</td>
+<td>N/A</td>
+<td>Status with which to update an order (only one such element can be present in a request)</td>
+</tr>
+</tbody></table>
+
+<p><strong>OrderStatus</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Order/StatusList/OrderStatus/StatusID</td>
+<td>String</td>
+<td>Required</td>
+<td>-5, 16-112</td>
+<td>Status with which to update an order</td>
+</tr>
+<tr>
+<td>Order/StatusList/OrderStatus/Note</td>
+<td>String</td>
+<td>Required</td>
+<td>Consult XSD</td>
+<td>Reason/Note for updating the order with this status</td>
+</tr>
+</tbody></table>
+
+<p><strong>CartShipmentInfo</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>TrackingNumber</td>
+<td>String</td>
+<td>Required</td>
+<td>Consult XSD</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>Shipper</td>
+<td>String</td>
+<td>Required</td>
+<td>ups, fedex, airborne, usps, dhl</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>Ship/State</td>
+<td>String</td>
+<td>Required</td>
+<td>“shipped”: to mark the order shipped. “clear” : to clear the shipment status. Any other string: to update order with custom ship status.</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>EmailCustomer</td>
+<td>Integer</td>
+<td>Optionnal</td>
+<td>true/false</td>
+<td>Self explanatory</td>
+</tr>
+</tbody></table>
+
+<p><strong>ShipToInfo (at least one child should be present)</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GeneralInfo</td>
+<td>XML element</td>
+<td>Optional</td>
+<td>N/A</td>
+<td>General information (name, phone number, email address) of ship to customer</td>
+</tr>
+<tr>
+<td>AddressInfo</td>
+<td>XML element</td>
+<td>Optional</td>
+<td>N/A</td>
+<td>Shipping address information</td>
+</tr>
+</tbody></table>
+
+<p>BillToInfo (at least one child should be present):</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GeneralInfo</td>
+<td>XML element</td>
+<td>Optional</td>
+<td>N/A</td>
+<td>General information (name, phone number, email address) of customer billed</td>
+</tr>
+<tr>
+<td>AddressInfo</td>
+<td>XML element</td>
+<td>Optional</td>
+<td>N/A</td>
+<td>Billing address information</td>
+</tr>
+</tbody></table>
+
+<p><strong>GeneralInfo (at least one child should be present)</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>FirstName</td>
+<td>String</td>
+<td>Optional</td>
+<td>Consult XSD</td>
+<td>Customer’s first name</td>
+</tr>
+<tr>
+<td>LastName</td>
+<td>String</td>
+<td>Optional</td>
+<td>Consult XSD</td>
+<td>Customer’s last name</td>
+</tr>
+<tr>
+<td>PhoneNumber</td>
+<td>String</td>
+<td>Optional</td>
+<td>Consult XSD</td>
+<td>Customer’s phone number</td>
+</tr>
+<tr>
+<td>Company</td>
+<td>String</td>
+<td>Optional</td>
+<td>Consult XSD</td>
+<td>Customer&#39;s company</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>String</td>
+<td>Optional</td>
+<td>Consult XSD</td>
+<td>Customer’s email address</td>
+</tr>
+</tbody></table>
+
+<p><strong>AddressInfo (at least one child should be present)</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Address1</td>
+<td>String</td>
+<td>Optional</td>
+<td>Consult XSD</td>
+<td>Customer’s street address</td>
+</tr>
+<tr>
+<td>Address2</td>
+<td>String</td>
+<td>Optional</td>
+<td>Consult XSD</td>
+<td>Customer’s street addres, second line</td>
+</tr>
+<tr>
+<td>City</td>
+<td>String</td>
+<td>Optional</td>
+<td>Consult XSD</td>
+<td>City in which street address resides</td>
+</tr>
+<tr>
+<td>Country</td>
+<td>String</td>
+<td>Optional</td>
+<td>Consult XSD</td>
+<td>Country in which city and street address reside</td>
+</tr>
+<tr>
+<td>State</td>
+<td>String</td>
+<td>Optional</td>
+<td>Consult XSD</td>
+<td>State in which street address and city reside</td>
+</tr>
+<tr>
+<td>Zip</td>
+<td>String</td>
+<td>Optional</td>
+<td>Consult XSD</td>
+<td>Zip code of provided address</td>
+</tr>
+</tbody></table>
+
+<p><strong>PayPalReviewInfo (at least one child should be present)</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PayPalReviewStatus</td>
+<td>String</td>
+<td>Optional</td>
+<td>Under Review, OK to ship, DO</td>
+<td></td>
+</tr>
+<tr>
+<td>NOT ship</td>
+<td>Status of PayPal Payment Review</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SellerProtection</td>
+<td>String</td>
+<td>Optional</td>
+<td>Ineligible, Eligible, PartiallyEligible</td>
+<td>PayPal Seller Protection</td>
+</tr>
+</tbody></table>
+
+<p><strong>ItemList</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Item</td>
+<td>XML element</td>
+<td>Required (1 or more)</td>
+<td>N/A</td>
+<td>Ordered item information</td>
+</tr>
+</tbody></table>
+
+<p><strong>Item</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>LineNumber</td>
+<td>String</td>
+<td>Required</td>
+<td>N/A</td>
+<td>Item line number</td>
+</tr>
+<tr>
+<td>ItemShipmentInfo</td>
+<td>String</td>
+<td>Required</td>
+<td>N/A</td>
+<td>Item shipment information</td>
+</tr>
+<tr>
+<td>ItemID</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>ItemCode</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>Quantity</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>UnitPrice</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Product URL</td>
+</tr>
+<tr>
+<td>Taxable</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Indicates if item is subject to sales tax</td>
+</tr>
+<tr>
+<td>ThumbnailURL</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Product thumbnail image URL</td>
+</tr>
+<tr>
+<td>SelectedOptionList</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Self explanatory</td>
+</tr>
+</tbody></table>
+
+<p><strong>SelectedOptionList</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Option</td>
+<td>XML element</td>
+<td>Not allowed in an update request</td>
+<td>Self-explanatory</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Option</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Option name</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Option name</td>
+</tr>
+</tbody></table>
+
+<p><strong>ItemShipmentInfo</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>TrackingNumber</td>
+<td>String</td>
+<td>Optional</td>
+<td>Consult XSD</td>
+<td>Shipment tracking number</td>
+</tr>
+<tr>
+<td>Shipper</td>
+<td>String</td>
+<td>Optional</td>
+<td>ups, fedex, airborne, usps, dhl</td>
+<td>Shipping provider</td>
+</tr>
+<tr>
+<td>ShipState</td>
+<td>String</td>
+<td>Required</td>
+<td>“shipped&quot;: to mark the order shipped. “clear” : to clear the shipment status.  Any other string: to update order with custom ship status</td>
+<td>Status of shipment</td>
+</tr>
+<tr>
+<td>EmailCustomer</td>
+<td>String</td>
+<td>Optional</td>
+<td>true/false</td>
+<td>Indicates customer email notification</td>
+</tr>
+</tbody></table>
+
+<p><strong>OrderTotals</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Subtotal</td>
+<td>Floating point</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>Shipping</td>
+<td>Floating point</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Total shipping cost</td>
+</tr>
+<tr>
+<td>Tax</td>
+<td>Floating point</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Total cost of taxes applied</td>
+</tr>
+<tr>
+<td>GiftWrap</td>
+<td>Floating point</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Gift wrap cost</td>
+</tr>
+<tr>
+<td>Discount</td>
+<td>Floating point</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Discount total</td>
+</tr>
+<tr>
+<td>Coupon</td>
+<td>Floating point</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Coupon total</td>
+</tr>
+<tr>
+<td>GiftCertificate</td>
+<td>Floating point</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Gift certificate total</td>
+</tr>
+<tr>
+<td>Credit</td>
+<td>XML element</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Total of credits</td>
+</tr>
+<tr>
+<td>MiscAdjustmentList</td>
+<td>XML element</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Total of other cost adjustments</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>Floating point</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Total price buyer will pay</td>
+</tr>
+</tbody></table>
+
+<p><strong>MiscAdjustment</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Name given to adjustment</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>String</td>
+<td>Required</td>
+<td>N/A</td>
+<td>Order number</td>
+</tr>
+</tbody></table>
+
+<p><strong>MiscAdjustmentList</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>MiscAdjustment</td>
+<td>XML Element</td>
+<td>Not allowed in an update request</td>
+<td>N/A</td>
+<td>Adjustment to order total</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Sample request XML:
+Case I: Update all information about an order — Update CartShipmentInfo:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;ystorewsRequest&gt;</span>
+ <span class="nt">&lt;StoreID&gt;</span> yhst-1234567890 <span class="nt">&lt;/StoreID&gt;</span>
+ <span class="nt">&lt;SecurityHeader&gt;</span>
+  <span class="nt">&lt;PartnerStoreContractToken&gt;</span> test <span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+   <span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Verb&gt;</span> update <span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+ <span class="nt">&lt;Order&gt;</span>
+  <span class="nt">&lt;OrderID&gt;</span> 485 <span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;StatusList&gt;</span>
+ <span class="nt">&lt;OrderStatus&gt;</span>
+  <span class="nt">&lt;StatusID&gt;</span> 5 <span class="err">&lt;</span>/StatusID
+  <span class="nt">&lt;Note&gt;</span> This is test note <span class="nt">&lt;/Note&gt;</span>
+<span class="nt">&lt;/OrderStatus&gt;</span>
+<span class="nt">&lt;/StatusList&gt;</span>
+<span class="nt">&lt;CartShipmentInfo&gt;</span>
+ <span class="nt">&lt;TrackingNumber&gt;</span> tn-12345678 <span class="nt">&lt;/TrackingNumber&gt;</span>
+ <span class="nt">&lt;Shipper&gt;</span> ups <span class="nt">&lt;/Shipper&gt;</span>
+ <span class="nt">&lt;ShipState&gt;</span> nostatus <span class="nt">&lt;/ShipState&gt;</span>
+ <span class="nt">&lt;EmailCustomer&gt;</span> true <span class="nt">&lt;/EmailCustomer&gt;</span>
+<span class="nt">&lt;/CartShipmentInfo&gt;</span>
+<span class="nt">&lt;ShipToInfo&gt;</span>
+ <span class="nt">&lt;GeneralInfo&gt;</span>
+ <span class="nt">&lt;FirstName&gt;</span> test-fname <span class="nt">&lt;/FirstName&gt;</span>
+ <span class="nt">&lt;LastName&gt;</span> test-lname <span class="nt">&lt;/LastName&gt;</span>
+ <span class="nt">&lt;PhoneNumber&gt;</span> 123-456-7890 <span class="nt">&lt;/PhoneNumber&gt;</span>
+ <span class="nt">&lt;Company&gt;</span> Yahoo <span class="nt">&lt;/Company&gt;</span>
+ <span class="nt">&lt;Email&gt;</span> test@test.com <span class="nt">&lt;/Email&gt;</span>
+<span class="nt">&lt;/GeneralInfo&gt;</span>
+<span class="nt">&lt;AddressInfo&gt;</span>
+ <span class="nt">&lt;Address1&gt;</span> 701 First Avenue <span class="nt">&lt;/Address1&gt;</span>
+ <span class="nt">&lt;Address2&gt;</span> Apt 101 <span class="nt">&lt;/Address2&gt;</span>
+ <span class="nt">&lt;City&gt;</span> Cupertino <span class="nt">&lt;/City&gt;</span>
+ <span class="nt">&lt;Country&gt;</span> US <span class="nt">&lt;/Country&gt;</span>
+ <span class="nt">&lt;State&gt;</span> CA <span class="nt">&lt;/State&gt;</span>
+ <span class="nt">&lt;Zip&gt;</span> 95014<span class="nt">&lt;/Zip&gt;</span>
+<span class="nt">&lt;/AddressInfo&gt;</span>
+<span class="nt">&lt;/ShipToInfo&gt;</span>
+<span class="nt">&lt;BillToInfo&gt;</span>
+ <span class="nt">&lt;GeneralInfo&gt;</span>
+  <span class="nt">&lt;FirstName&gt;</span> test-fname <span class="nt">&lt;/FirstName&gt;</span>
+  <span class="nt">&lt;LastName&gt;</span> test-lname <span class="nt">&lt;/LastName&gt;</span>
+  <span class="nt">&lt;PhoneNumber&gt;</span> 456-789-1234 <span class="nt">&lt;/PhoneNumber&gt;</span>
+ <span class="nt">&lt;Company&gt;</span> Yahoo <span class="nt">&lt;/Company&gt;</span>
+<span class="nt">&lt;Email&gt;</span> test@test.com <span class="nt">&lt;/Email&gt;</span>
+<span class="nt">&lt;/GeneralInfo&gt;</span>
+<span class="nt">&lt;AddressInfo&gt;</span>
+   <span class="nt">&lt;Address1&gt;</span> 701 First Avenue <span class="nt">&lt;/Address1&gt;</span>
+   <span class="nt">&lt;Address2&gt;</span> Something <span class="nt">&lt;/Address2&gt;</span>
+   <span class="nt">&lt;City&gt;</span> Sunnyvale <span class="nt">&lt;/City&gt;</span>
+   <span class="nt">&lt;Country&gt;</span> US <span class="nt">&lt;/Country&gt;</span>
+   <span class="nt">&lt;State&gt;</span> CA <span class="nt">&lt;/State&gt;</span>
+   <span class="nt">&lt;Zip&gt;</span> 95014<span class="nt">&lt;/Zip&gt;</span>
+    <span class="nt">&lt;/AddressInfo&gt;</span>
+   <span class="nt">&lt;/BillToInfo&gt;</span>
+   <span class="nt">&lt;BuyerEmail&gt;</span> test_shopper@test.com <span class="nt">&lt;/BuyerEmail&gt;</span>
+  <span class="nt">&lt;/Order&gt;</span>
+ <span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample request XML:
+Case II: Update shipment information on a per item basis.</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;ystorewsRequest&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span> yhst-1234567890 <span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;</span> test <span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Verb&gt;</span> update <span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span> 485 <span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;StatusList&gt;</span>
+<span class="nt">&lt;OrderStatus&gt;</span>
+<span class="nt">&lt;StatusID&gt;</span> 5 <span class="err">&lt;</span>/StatusID
+<span class="nt">&lt;Note&gt;</span> This is test note <span class="nt">&lt;/Note&gt;</span>
+<span class="nt">&lt;/OrderStatus&gt;</span>
+<span class="nt">&lt;/StatusList&gt;</span>
+<span class="nt">&lt;ShipToInfo&gt;</span>
+<span class="nt">&lt;GeneralInfo&gt;</span>
+<span class="nt">&lt;FirstName&gt;</span> test-fname <span class="nt">&lt;/FirstName&gt;</span>
+<span class="nt">&lt;LastName&gt;</span> test-lname <span class="nt">&lt;/LastName&gt;</span>
+<span class="nt">&lt;PhoneNumber&gt;</span> 123-456-7890 <span class="nt">&lt;/PhoneNumber&gt;</span>
+<span class="nt">&lt;Company&gt;</span> Yahoo <span class="nt">&lt;/Company&gt;</span>
+<span class="nt">&lt;Email&gt;</span> test@test.com <span class="nt">&lt;/Email&gt;</span>
+<span class="nt">&lt;/GeneralInfo&gt;</span>
+<span class="nt">&lt;AddressInfo&gt;</span>
+<span class="nt">&lt;Address1&gt;</span> 701 First Avenue <span class="nt">&lt;/Address1&gt;</span>
+<span class="nt">&lt;Address2&gt;</span> Apt 101 <span class="nt">&lt;/Address2&gt;</span>
+<span class="nt">&lt;City&gt;</span> Cupertino <span class="nt">&lt;/City&gt;</span>
+<span class="nt">&lt;Country&gt;</span> US <span class="nt">&lt;/Country&gt;</span>
+<span class="nt">&lt;State&gt;</span> CA <span class="nt">&lt;/State&gt;</span>
+<span class="nt">&lt;Zip&gt;</span> 95014<span class="nt">&lt;/Zip&gt;</span>
+<span class="nt">&lt;/AddressInfo&gt;</span>
+<span class="nt">&lt;/ShipToInfo&gt;</span>
+<span class="nt">&lt;BillToInfo&gt;</span>
+<span class="nt">&lt;GeneralInfo&gt;</span>
+<span class="nt">&lt;FirstName&gt;</span> test-fname <span class="nt">&lt;/FirstName&gt;</span>
+<span class="nt">&lt;LastName&gt;</span> test-lname <span class="nt">&lt;/LastName&gt;</span>
+<span class="nt">&lt;PhoneNumber&gt;</span> 456-789-1234 <span class="nt">&lt;/PhoneNumber&gt;</span>
+<span class="nt">&lt;Company&gt;</span> Yahoo <span class="nt">&lt;/Company&gt;</span>
+<span class="nt">&lt;Email&gt;</span> test@test.com <span class="nt">&lt;/Email&gt;</span>
+<span class="nt">&lt;/GeneralInfo&gt;</span>
+<span class="nt">&lt;AddressInfo&gt;</span>
+<span class="nt">&lt;Address1&gt;</span> 701 First Avenue <span class="nt">&lt;/Address1&gt;</span>
+<span class="nt">&lt;Address2&gt;</span> Something <span class="nt">&lt;/Address2&gt;</span>
+<span class="nt">&lt;City&gt;</span> Sunnyvale <span class="nt">&lt;/City&gt;</span>
+<span class="nt">&lt;Country&gt;</span> US <span class="nt">&lt;/Country&gt;</span>
+<span class="nt">&lt;State&gt;</span> CA <span class="nt">&lt;/State&gt;</span>
+<span class="nt">&lt;Zip&gt;</span> 95014<span class="nt">&lt;/Zip&gt;</span>
+<span class="nt">&lt;/AddressInfo&gt;</span>
+<span class="nt">&lt;/BillToInfo&gt;</span>
+<span class="nt">&lt;BuyerEmail&gt;</span> test_shopper@test.com <span class="nt">&lt;/BuyerEmail&gt;</span>
+<span class="nt">&lt;ItemList&gt;</span>
+<span class="nt">&lt;Item&gt;</span>
+<span class="nt">&lt;LineNumber&gt;</span> 0 <span class="nt">&lt;/LineNumber&gt;</span>
+<span class="nt">&lt;ItemShipmentInfo&gt;</span>
+<span class="nt">&lt;TrackingNumber&gt;</span> 12345678 <span class="nt">&lt;/TrackingNumber&gt;</span>
+<span class="nt">&lt;Shipper&gt;</span> ups <span class="nt">&lt;/Shipper&gt;</span>
+<span class="nt">&lt;ShipState&gt;</span> nostatus <span class="nt">&lt;/ShipState&gt;</span>
+<span class="nt">&lt;/ItemShipmentInfo&gt;</span>
+<span class="nt">&lt;/Item&gt;</span>
+<span class="nt">&lt;Item&gt;</span>
+<span class="nt">&lt;LineNumber&gt;</span> 1 <span class="nt">&lt;/LineNumber&gt;</span>
+<span class="nt">&lt;ItemShipmentInfo&gt;</span>
+<span class="nt">&lt;TrackingNumber&gt;</span> 23456789 <span class="nt">&lt;/TrackingNumber&gt;</span>
+<span class="nt">&lt;Shipper&gt;</span> fedex <span class="nt">&lt;/Shipper&gt;</span>
+<span class="nt">&lt;ShipState&gt;</span> 1-2d <span class="nt">&lt;/ShipState&gt;</span>
+<span class="nt">&lt;/ItemShipmentInfo&gt;</span>
+<span class="nt">&lt;/Item&gt;</span>
+<span class="nt">&lt;/ItemList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML (Case I and Case II)</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorews:ystorewsResponse</span> <span class="na">xmlns:ystorews=</span><span class="s">"urn:yahoo:sbs:ystorews"</span> <span class="nt">&gt;</span>
+ <span class="nt">&lt;RequestID&gt;</span> Test Request ID <span class="nt">&lt;/RequestID&gt;</span>
+ <span class="nt">&lt;ProcessingStatus&gt;</span> All OK <span class="nt">&lt;/ProcessingStatus&gt;</span>
+<span class="nt">&lt;/ystorews:ystorewsResponse&gt;</span>
+</code></pre><h2 id='error-code'>Error Code</h2>
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>20002</td>
+<td>Itemized shipment request not allowed when number of items is 1.</td>
+</tr>
+<tr>
+<td>20003</td>
+<td>Both itemized and non-itemized shipment requests cannot co-exist when number of items is greater than 1.</td>
+</tr>
+<tr>
+<td>20007</td>
+<td>Inadequate number of fields for this request.</td>
+</tr>
+<tr>
+<td>20009</td>
+<td>More than one status present in input.</td>
+</tr>
+<tr>
+<td>20010</td>
+<td>Invalid ShipState value.</td>
+</tr>
+<tr>
+<td>20011</td>
+<td>Invalid Shipper value.</td>
+</tr>
+<tr>
+<td>20012</td>
+<td>Empty General Info Tag.</td>
+</tr>
+<tr>
+<td>20013</td>
+<td>Empty Address Info Tag.</td>
+</tr>
+<tr>
+<td>20014</td>
+<td>Empty Shipment Info Tag.</td>
+</tr>
+<tr>
+<td>20015</td>
+<td>Empty ShipTo Info Tag.</td>
+</tr>
+<tr>
+<td>20016</td>
+<td>Empty BillTo Info Tag.</td>
+</tr>
+<tr>
+<td>20017</td>
+<td>Missing Note in order status Tag.</td>
+</tr>
+<tr>
+<td>20018</td>
+<td>Invalid status ID supplied.</td>
+</tr>
+<tr>
+<td>20019</td>
+<td>Direct shipment status updates not allowed. Update CartShipmentInfo or ItemShipmentInfo to affect shipment status updates.</td>
+</tr>
+<tr>
+<td>20020</td>
+<td>At least one of the item numbers is greater than the total number of items in the order..</td>
+</tr>
+<tr>
+<td>20023</td>
+<td>ItemShipmentInfo tag is missing in the request.</td>
+</tr>
+<tr>
+<td>20024</td>
+<td>Update operation not supported for these fields. Please refer to reference manual.</td>
+</tr>
+<tr>
+<td>20027</td>
+<td>Zero fields supplied for update.</td>
+</tr>
+</tbody></table>
+<h2 id='orderlistquery'>OrderListQuery</h2>
+<p>The OrderListQuery operation is used to retrieve information about a single order, or a range of orders.</p>
+<h2 id='get-order'>Get Order</h2>
+<p>This operation is used to retrieve information about a particular order. The information sought must
+be specified in the ‘Include’ tag under ‘Filter’. Currently, only certain fields are supported.</p>
+
+<p><strong>REST based URL:</strong> https://<storeid>.order.store.yahooapis.com/V1/order</p>
+
+<p><strong>Method</strong>: POST</p>
+
+<p><strong>Request fields</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OrderListQuery/Filter/Field</td>
+<td>String</td>
+<td>Required (1 or more)</td>
+<td>status, shipmentinfo, shiptoinfo, billtoinfo, buyeremail, customfields</td>
+<td>The specific field that should be retrieved from this order.</td>
+</tr>
+<tr>
+<td>OrderList/QueryParams/OrderID</td>
+<td>String</td>
+<td>Required</td>
+<td>Valid order ID</td>
+<td>Order number</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Response fields: Order XML element or error. For error responses, please refer to the common error structure noted
+for section 2.</p>
+</blockquote>
+
+<p>Sample request XML:</p>
+<pre class="highlight xml tab-xml"><code>
+<span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;ystorewsRequest&gt;</span>
+ <span class="nt">&lt;StoreID&gt;</span> yhst-1234567890 <span class="nt">&lt;/StoreID&gt;</span>
+ <span class="nt">&lt;SecurityHeader&gt;</span>
+ <span class="nt">&lt;PartnerStoreContractToken&gt;</span> test <span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;Verb&gt;</span> get <span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;OrderListQuery&gt;</span>
+<span class="nt">&lt;Filter&gt;</span>
+ <span class="nt">&lt;Include&gt;</span> all <span class="nt">&lt;/Include&gt;</span>
+<span class="nt">&lt;/Filter&gt;</span>
+<span class="nt">&lt;QueryParams&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span> 485 <span class="nt">&lt;/OrderID&gt;</span>
+ <span class="nt">&lt;/QueryParams&gt;</span>
+ <span class="nt">&lt;/OrderListQuery&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML:</p>
+</blockquote>
+
+<p>Note: The sample responses below include a Promotions element to support the Promotions
+Center feature. This element and the information it contains are present only for orders in which
+promotions have been applied.</p>
+
+<p>Case I: An order contains only one item OR an order contains multiple items but was not split shipped prior to issuing the request, and includes promotions</p>
+<pre class="highlight xml tab-xml"><code>
+<span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;ystorews:ystorewsResponse</span> <span class="na">xmlns:ystorews=</span><span class="s">"urn:yahoo:sbs:ystorews"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span> RequestID-1190608954601782 <span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;ResponseResourceList&gt;</span>
+<span class="nt">&lt;OrderListQuery&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span> 485 <span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;CreationTime&gt;</span> Wed Aug 15 00:50:09 2007 GMT <span class="nt">&lt;/CreationTime&gt;</span>
+<span class="nt">&lt;StatusList&gt;</span>
+<span class="nt">&lt;OrderStatus&gt;</span>
+<span class="nt">&lt;StatusID&gt;</span> 26 <span class="nt">&lt;/StatusID&gt;</span>
+<span class="nt">&lt;/OrderStatus&gt;</span>
+<span class="nt">&lt;OrderStatus&gt;</span>
+<span class="nt">&lt;StatusID&gt;</span> 8 <span class="nt">&lt;/StatusID&gt;</span>
+<span class="nt">&lt;/OrderStatus&gt;</span>
+<span class="nt">&lt;/StatusList&gt;</span>
+<span class="nt">&lt;ShipMethod&gt;</span> Air (3-5 days) <span class="nt">&lt;/ShipMethod&gt;</span>
+<span class="nt">&lt;CartShipmentInfo&gt;</span>
+<span class="nt">&lt;ShipState&gt;</span> 1-2d <span class="nt">&lt;/ShipState&gt;</span>
+<span class="nt">&lt;TrackingNumber&gt;</span> tn-12345678 <span class="nt">&lt;/TrackingNumber&gt;</span>
+<span class="nt">&lt;Shipper&gt;</span> ups <span class="nt">&lt;/Shipper&gt;</span>
+<span class="nt">&lt;/CartShipmentInfo&gt;</span>
+<span class="nt">&lt;ShipToInfo&gt;</span>
+<span class="nt">&lt;GeneralInfo&gt;</span>
+<span class="nt">&lt;FirstName&gt;</span> test-fname <span class="nt">&lt;/FirstName&gt;</span>
+<span class="nt">&lt;LastName&gt;</span> test-lname <span class="nt">&lt;/LastName&gt;</span>
+<span class="nt">&lt;PhoneNumber&gt;</span> 123-456-7890 <span class="nt">&lt;/PhoneNumber&gt;</span>
+<span class="nt">&lt;Company&gt;</span> Yahoo <span class="nt">&lt;/Company&gt;</span>
+<span class="nt">&lt;Email&gt;</span>test@test.com <span class="nt">&lt;/Email&gt;</span>
+<span class="nt">&lt;/GeneralInfo&gt;</span>
+<span class="nt">&lt;AddressInfo&gt;</span>
+<span class="nt">&lt;Address1&gt;</span> 701 First Avenue <span class="nt">&lt;/Address1&gt;</span>
+<span class="nt">&lt;Address2&gt;</span> Apt G111 <span class="nt">&lt;/Address2&gt;</span>
+<span class="nt">&lt;City&gt;</span> Sunnyvale <span class="nt">&lt;/City&gt;</span>
+<span class="nt">&lt;Country&gt;</span> US <span class="nt">&lt;/Country&gt;</span>
+<span class="nt">&lt;State&gt;</span> CA <span class="nt">&lt;/State&gt;</span>
+<span class="nt">&lt;Zip&gt;</span> 95014 <span class="nt">&lt;/Zip&gt;</span>
+<span class="nt">&lt;/AddressInfo&gt;</span>
+<span class="nt">&lt;/ShipToInfo&gt;</span>
+<span class="nt">&lt;BillToInfo&gt;</span>
+<span class="nt">&lt;GeneralInfo&gt;</span>
+<span class="nt">&lt;FirstName&gt;</span> bill-test <span class="nt">&lt;/FirstName&gt;</span>
+<span class="nt">&lt;LastName&gt;</span> bill-test <span class="nt">&lt;/LastName&gt;</span>
+<span class="nt">&lt;PhoneNumber&gt;</span> 555-555-1212 <span class="nt">&lt;/PhoneNumber&gt;</span>
+<span class="nt">&lt;Company&gt;</span> Yahoo <span class="nt">&lt;/Company&gt;</span>
+<span class="nt">&lt;Email&gt;</span> bill@test.com <span class="nt">&lt;/Email&gt;</span>
+<span class="nt">&lt;/GeneralInfo&gt;</span>
+<span class="nt">&lt;AddressInfo&gt;</span>
+<span class="nt">&lt;Address1&gt;</span> 701 First Avenue <span class="nt">&lt;/Address1&gt;</span>
+<span class="nt">&lt;Address2&gt;</span> Something <span class="nt">&lt;/Address2&gt;</span>
+<span class="nt">&lt;City&gt;</span> Sunnyvale <span class="nt">&lt;/City&gt;</span>
+<span class="nt">&lt;Country&gt;</span> US <span class="nt">&lt;/Country&gt;</span>
+<span class="nt">&lt;State&gt;</span> CA <span class="nt">&lt;/State&gt;</span>
+<span class="nt">&lt;Zip&gt;</span> 95014 <span class="nt">&lt;/Zip&gt;</span>
+<span class="nt">&lt;/AddressInfo&gt;</span>
+<span class="nt">&lt;/BillToInfo&gt;</span>
+<span class="nt">&lt;BuyerEmail&gt;</span> test@test.com <span class="nt">&lt;/BuyerEmail&gt;</span>
+<span class="nt">&lt;CustomFieldsList&gt;</span>
+<span class="nt">&lt;CustomField&gt;</span>
+<span class="nt">&lt;Key&gt;</span>customkey1<span class="nt">&lt;/Key&gt;</span>
+<span class="nt">&lt;Value&gt;</span>Mycustomvalue1<span class="nt">&lt;/Value&gt;</span>
+<span class="nt">&lt;/CustomField&gt;</span>
+<span class="nt">&lt;CustomFieldsList&gt;</span>
+<span class="nt">&lt;ItemList&gt;</span>
+<span class="nt">&lt;Item&gt;</span>
+<span class="nt">&lt;LineNumber&gt;</span> 0 <span class="nt">&lt;/LineNumber&gt;</span>
+<span class="nt">&lt;ItemID&gt;</span> item1 <span class="nt">&lt;/ItemID&gt;</span>
+<span class="nt">&lt;ItemCode&gt;</span> item1 <span class="nt">&lt;/ItemCode&gt;</span>
+<span class="nt">&lt;Quantity&gt;</span> 1 <span class="nt">&lt;/Quantity&gt;</span>
+<span class="nt">&lt;UnitPrice&gt;</span> 11 <span class="nt">&lt;/UnitPrice&gt;</span>
+<span class="nt">&lt;Description&gt;</span> item1 <span class="nt">&lt;/Description&gt;</span>
+<span class="nt">&lt;URL&gt;</span> http://v3test-46.stores.yahoo.net/item1.html <span class="nt">&lt;/URL&gt;</span>
+<span class="nt">&lt;Taxable&gt;</span> true <span class="nt">&lt;/Taxable&gt;</span>
+<span class="nt">&lt;ThumbnailURL&gt;</span> http://v3test-46.stores.yahoo.net/item1.html <span class="nt">&lt;/ThumbnailURL&gt;</span>
+<span class="nt">&lt;/Item&gt;</span>
+<span class="nt">&lt;/ItemList&gt;</span>
+<span class="nt">&lt;OrderTotals&gt;</span>
+<span class="nt">&lt;Subtotal&gt;</span>11.01<span class="nt">&lt;/Subtotal&gt;</span>
+<span class="nt">&lt;Shipping&gt;</span>0.00<span class="nt">&lt;/Shipping&gt;</span>
+<span class="nt">&lt;Tax&gt;</span>0.00<span class="nt">&lt;/Tax&gt;</span>
+<span class="nt">&lt;Promotions&gt;</span>
+<span class="nt">&lt;AppliedPromotion&gt;</span>
+<span class="nt">&lt;Id&gt;</span>2<span class="nt">&lt;/Id&gt;</span>
+<span class="nt">&lt;Name&gt;</span>MyPromotion<span class="nt">&lt;/Name&gt;</span>
+<span class="nt">&lt;Type&gt;</span>PERCENTAGE<span class="nt">&lt;/Type&gt;</span>
+<span class="nt">&lt;Discount&gt;</span>0.10<span class="nt">&lt;/Discount&gt;</span>
+<span class="nt">&lt;Message&gt;</span>10.00% off<span class="nt">&lt;/Message&gt;</span>
+<span class="nt">&lt;/AppliedPromotion&gt;</span>
+<span class="nt">&lt;/Promotions&gt;</span>
+<span class="nt">&lt;Total&gt;</span>10.91<span class="nt">&lt;/Total&gt;</span>
+<span class="nt">&lt;/OrderTotals&gt;</span>
+<span class="nt">&lt;Referer&gt;</span> http://www.yahoo.com <span class="nt">&lt;/Referer&gt;</span>
+<span class="nt">&lt;MerchantNotes&gt;</span>
+&gt; 2007 Aug 22 03:16: Marked OK; reason given: test-note-0
+&gt; 2007 Aug 22 03:17: Marked Fraudulent; reason given: test-note-1
+<span class="nt">&lt;/MerchantNotes&gt;</span>
+<span class="nt">&lt;EntryPoint&gt;</span> http://www.yahoo.com <span class="nt">&lt;/EntryPoint&gt;</span>
+<span class="nt">&lt;BuyerComments&gt;</span> Test Comments <span class="nt">&lt;/BuyerComments&gt;</span>
+<span class="nt">&lt;PaymentProcessor&gt;</span> PayPal <span class="nt">&lt;/PaymentProcessor&gt;</span>
+<span class="nt">&lt;Currency&gt;</span> USD <span class="nt">&lt;/Currency&gt;</span>
+<span class="nt">&lt;GiftMessage&gt;</span>test gift message<span class="nt">&lt;/GiftMessage&gt;</span>
+<span class="nt">&lt;PaymentType&gt;</span>PayPal<span class="nt">&lt;/PaymentType&gt;</span>
+<span class="nt">&lt;LastUpdatedTime&gt;</span>Tue Sep 10 09:33:14 2013 GMT<span class="nt">&lt;/LastUpdatedTime&gt;</span>
+<span class="nt">&lt;BuyerIP&gt;</span>203.83.248.37<span class="nt">&lt;/BuyerIP&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/OrderListQuery&gt;</span>
+<span class="nt">&lt;/ResponseResourceList&gt;</span>
+<span class="nt">&lt;/ystorews:ystorewsResponse&gt;</span>
+</code></pre>
+<blockquote>
+<p>Case II: An order contains multiple items and promotions, and its shipment information
+was updated on a per item basis prior to issuing the request.</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;ystorewsResponse</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;Version&gt;</span>1.0<span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span> RequestID-1190608954601782 <span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;ResponseResourceList&gt;</span>
+<span class="nt">&lt;OrderListQuery&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span> 485 <span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;CreationTime&gt;</span> Wed Aug 15 00:50:09 2007 GMT <span class="nt">&lt;/CreationTime&gt;</span>
+<span class="nt">&lt;StatusList&gt;</span>
+<span class="nt">&lt;OrderStatus&gt;</span>
+<span class="nt">&lt;StatusID&gt;</span> 26 <span class="nt">&lt;/StatusID&gt;</span>
+<span class="nt">&lt;/OrderStatus&gt;</span>
+<span class="nt">&lt;OrderStatus&gt;</span>
+<span class="nt">&lt;StatusID&gt;</span> 8 <span class="nt">&lt;/StatusID&gt;</span>
+<span class="nt">&lt;/OrderStatus&gt;</span>
+<span class="nt">&lt;/StatusList&gt;</span>
+<span class="nt">&lt;ShipMethod&gt;</span> Air (3-5 days) <span class="nt">&lt;/ShipMethod&gt;</span>
+<span class="nt">&lt;CartShipmentInfo&gt;</span>
+<span class="nt">&lt;ShipState&gt;</span> 1-2d <span class="nt">&lt;/ShipState&gt;</span>
+<span class="nt">&lt;ItemList&gt;</span>
+<span class="nt">&lt;Item&gt;</span>
+<span class="nt">&lt;LineNumber&gt;</span> 0 <span class="nt">&lt;/LineNumber&gt;</span>
+<span class="nt">&lt;ItemID&gt;</span> item1 <span class="nt">&lt;/ItemID&gt;</span>
+<span class="nt">&lt;ItemCode&gt;</span> item1 <span class="nt">&lt;/ItemCode&gt;</span>
+<span class="nt">&lt;Quantity&gt;</span> 1 <span class="nt">&lt;/Quantity&gt;</span>
+<span class="nt">&lt;UnitPrice&gt;</span> 11 <span class="nt">&lt;/UnitPrice&gt;</span>
+<span class="nt">&lt;Description&gt;</span> item1 <span class="nt">&lt;/Description&gt;</span>
+<span class="nt">&lt;URL&gt;</span> http://v3test-46.stores.yahoo.net/item1.html <span class="nt">&lt;/URL&gt;</span>
+<span class="nt">&lt;Taxable&gt;</span> true <span class="nt">&lt;/Taxable&gt;</span>
+<span class="nt">&lt;ThumbnailURL&gt;</span> http://v3test-46.stores.yahoo.net/item1.html <span class="nt">&lt;/ThumbnailURL&gt;</span>
+<span class="nt">&lt;ItemShipmentInfo&gt;</span>
+<span class="nt">&lt;TrackingNumber&gt;</span> 12345678 <span class="nt">&lt;/TrackingNumber&gt;</span>
+<span class="nt">&lt;Shipper&gt;</span> ups <span class="nt">&lt;/Shipper&gt;</span>
+<span class="nt">&lt;ShipState&gt;</span> some status <span class="nt">&lt;/ShipState&gt;</span>
+<span class="nt">&lt;/ItemShipmentInfo&gt;</span>
+<span class="nt">&lt;/Item&gt;</span>
+<span class="nt">&lt;Item&gt;</span>
+<span class="nt">&lt;LineNumber&gt;</span> 1 <span class="nt">&lt;/LineNumber&gt;</span>
+<span class="nt">&lt;ItemID&gt;</span> item1 <span class="nt">&lt;/ItemID&gt;</span>
+<span class="nt">&lt;ItemCode&gt;</span> item1 <span class="nt">&lt;/ItemCode&gt;</span>
+<span class="nt">&lt;Quantity&gt;</span> 1 <span class="nt">&lt;/Quantity&gt;</span>
+<span class="nt">&lt;UnitPrice&gt;</span> 11 <span class="nt">&lt;/UnitPrice&gt;</span>
+<span class="nt">&lt;Description&gt;</span> item1 <span class="nt">&lt;/Description&gt;</span>
+<span class="nt">&lt;URL&gt;</span> http://v3test-46.stores.yahoo.net/item1.html <span class="nt">&lt;/URL&gt;</span>
+<span class="nt">&lt;Taxable&gt;</span> true <span class="nt">&lt;/Taxable&gt;</span>
+<span class="nt">&lt;ThumbnailURL&gt;</span> http://v3test-46.stores.yahoo.net/item1.html <span class="nt">&lt;/ThumbnailURL&gt;</span>
+<span class="nt">&lt;ItemShipmentInfo&gt;</span>
+<span class="nt">&lt;TrackingNumber&gt;</span> 12345678 <span class="nt">&lt;/TrackingNumber&gt;</span>
+<span class="nt">&lt;Shipper&gt;</span> ups <span class="nt">&lt;/Shipper&gt;</span>
+<span class="nt">&lt;ShipState&gt;</span> some status <span class="nt">&lt;/ShipState&gt;</span>
+<span class="nt">&lt;/ItemShipmentInfo&gt;</span>
+<span class="nt">&lt;/Item&gt;</span>
+<span class="nt">&lt;/ItemList&gt;</span>
+<span class="nt">&lt;OrderTotals&gt;</span>
+<span class="nt">&lt;Subtotal&gt;</span>11.01<span class="nt">&lt;/Subtotal&gt;</span>
+<span class="nt">&lt;Shipping&gt;</span>0.00<span class="nt">&lt;/Shipping&gt;</span>
+<span class="nt">&lt;Tax&gt;</span>0.00<span class="nt">&lt;/Tax&gt;</span>
+<span class="nt">&lt;Promotions&gt;</span>
+<span class="nt">&lt;AppliedPromotion&gt;</span>
+<span class="nt">&lt;Id&gt;</span>2<span class="nt">&lt;/Id&gt;</span>
+<span class="nt">&lt;Name&gt;</span>MyPromotion<span class="nt">&lt;/Name&gt;</span>
+<span class="nt">&lt;Type&gt;</span>PERCENTAGE<span class="nt">&lt;/Type&gt;</span>
+<span class="nt">&lt;Discount&gt;</span>0.10<span class="nt">&lt;/Discount&gt;</span>
+<span class="nt">&lt;Message&gt;</span>10.00% off<span class="nt">&lt;/Message&gt;</span>
+<span class="nt">&lt;/AppliedPromotion&gt;</span>
+<span class="nt">&lt;/Promotions&gt;</span>
+<span class="nt">&lt;Total&gt;</span>10.91<span class="nt">&lt;/Total&gt;</span>
+<span class="nt">&lt;/OrderTotals&gt;</span>
+<span class="nt">&lt;Referer&gt;</span> http://www.yahoo.com <span class="nt">&lt;/Referer&gt;</span>
+<span class="nt">&lt;MerchantNotes&gt;</span>
+&gt; 2007 Aug 22 03:16: Marked OK; reason given: test-note-0
+&gt; 2007 Aug 22 03:17: Marked Fraudulent; reason given: test-note-1
+<span class="nt">&lt;/MerchantNotes&gt;</span>
+<span class="nt">&lt;EntryPoint&gt;</span> http://www.yahoo.com <span class="nt">&lt;/EntryPoint&gt;</span>
+<span class="nt">&lt;BuyerComments&gt;</span> Test Comments <span class="nt">&lt;/BuyerComments&gt;</span>
+<span class="nt">&lt;PaymentProcessor&gt;</span> PayPal <span class="nt">&lt;/PaymentProcessor&gt;</span>
+<span class="nt">&lt;Currency&gt;</span> USD <span class="nt">&lt;/Currency&gt;</span>
+<span class="nt">&lt;GiftMessage&gt;</span>test gift message<span class="nt">&lt;/GiftMessage&gt;</span>
+<span class="nt">&lt;PaymentType&gt;</span>PayPal<span class="nt">&lt;/PaymentType&gt;</span>
+<span class="nt">&lt;LastUpdatedTime&gt;</span>Tue Sep 10 09:33:14 2013 GMT<span class="nt">&lt;/LastUpdatedTime&gt;</span>
+<span class="nt">&lt;BuyerIP&gt;</span>203.83.248.37<span class="nt">&lt;/BuyerIP&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/OrderListQuery&gt;</span>
+<span class="nt">&lt;/ResponseResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsResponse&gt;</span>
+</code></pre>
+<blockquote>
+<p>Case III: An order is placed that comes under PayPal Payment Review and includes
+promotions</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;ystorews:ystorewsResponse</span> <span class="na">xmlns:ystorews=</span><span class="s">"urn:yahoo:sbs:ystorews"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span> RequestID-1190608954601782 <span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;ResponseResourceList&gt;</span>
+<span class="nt">&lt;OrderListQuery&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span> 485 <span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;CreationTime&gt;</span> Wed Aug 15 00:50:09 2007 GMT <span class="nt">&lt;/CreationTime&gt;</span>
+<span class="nt">&lt;StatusList&gt;</span>
+<span class="nt">&lt;OrderStatus&gt;</span>
+<span class="nt">&lt;StatusID&gt;</span> 5 <span class="nt">&lt;/StatusID&gt;</span>
+<span class="nt">&lt;/OrderStatus&gt;</span>
+<span class="nt">&lt;/StatusList&gt;</span>
+<span class="nt">&lt;ShipMethod&gt;</span> Air (3-5 days) <span class="nt">&lt;/ShipMethod&gt;</span>
+<span class="nt">&lt;CartShipmentInfo&gt;</span>
+<span class="nt">&lt;ShipState&gt;</span> 1-2d <span class="nt">&lt;/ShipState&gt;</span>
+<span class="nt">&lt;TrackingNumber&gt;</span> tn-12345678 <span class="nt">&lt;/TrackingNumber&gt;</span>
+<span class="nt">&lt;Shipper&gt;</span> ups <span class="nt">&lt;/Shipper&gt;</span>
+<span class="nt">&lt;/CartShipmentInfo&gt;</span>
+<span class="nt">&lt;ShipToInfo&gt;</span>
+<span class="nt">&lt;GeneralInfo&gt;</span>
+<span class="nt">&lt;FirstName&gt;</span> test-fname <span class="nt">&lt;/FirstName&gt;</span>
+<span class="nt">&lt;LastName&gt;</span> test-lname <span class="nt">&lt;/LastName&gt;</span>
+<span class="nt">&lt;PhoneNumber&gt;</span> 123-456-7890 <span class="nt">&lt;/PhoneNumber&gt;</span>
+<span class="nt">&lt;Company&gt;</span> Yahoo <span class="nt">&lt;/Company&gt;</span>
+<span class="nt">&lt;Email&gt;</span>test@test.com <span class="nt">&lt;/Email&gt;</span>
+<span class="nt">&lt;/GeneralInfo&gt;</span>
+<span class="nt">&lt;AddressInfo&gt;</span>
+<span class="nt">&lt;Address1&gt;</span> 701 First Avenue <span class="nt">&lt;/Address1&gt;</span>
+<span class="nt">&lt;Address2&gt;</span> Apt G111 <span class="nt">&lt;/Address2&gt;</span>
+<span class="nt">&lt;City&gt;</span> Sunnyvale <span class="nt">&lt;/City&gt;</span>
+<span class="nt">&lt;Country&gt;</span> US <span class="nt">&lt;/Country&gt;</span>
+<span class="nt">&lt;State&gt;</span> CA <span class="nt">&lt;/State&gt;</span>
+<span class="nt">&lt;Zip&gt;</span> 95014 <span class="nt">&lt;/Zip&gt;</span>
+<span class="nt">&lt;/AddressInfo&gt;</span>
+<span class="nt">&lt;/ShipToInfo&gt;</span>
+<span class="nt">&lt;BillToInfo&gt;</span>
+<span class="nt">&lt;GeneralInfo&gt;</span>
+<span class="nt">&lt;FirstName&gt;</span> bill-test <span class="nt">&lt;/FirstName&gt;</span>
+<span class="nt">&lt;LastName&gt;</span> bill-test <span class="nt">&lt;/LastName&gt;</span>
+<span class="nt">&lt;PhoneNumber&gt;</span> 555-555-1212 <span class="nt">&lt;/PhoneNumber&gt;</span>
+<span class="nt">&lt;Company&gt;</span> Yahoo <span class="nt">&lt;/Company&gt;</span>
+<span class="nt">&lt;Email&gt;</span> bill@test.com <span class="nt">&lt;/Email&gt;</span>
+<span class="nt">&lt;/GeneralInfo&gt;</span>
+<span class="nt">&lt;AddressInfo&gt;</span>
+<span class="nt">&lt;Address1&gt;</span> 701 First Avenue <span class="nt">&lt;/Address1&gt;</span>
+<span class="nt">&lt;Address2&gt;</span> Something <span class="nt">&lt;/Address2&gt;</span>
+<span class="nt">&lt;City&gt;</span> Sunnyvale <span class="nt">&lt;/City&gt;</span>
+<span class="nt">&lt;Country&gt;</span> US <span class="nt">&lt;/Country&gt;</span>
+<span class="nt">&lt;State&gt;</span> CA <span class="nt">&lt;/State&gt;</span>
+<span class="nt">&lt;Zip&gt;</span> 95014 <span class="nt">&lt;/Zip&gt;</span>
+<span class="nt">&lt;/AddressInfo&gt;</span>
+<span class="nt">&lt;/BillToInfo&gt;</span>
+<span class="nt">&lt;PayPalReviewInfo&gt;</span>
+<span class="nt">&lt;PayPalReviewStatus&gt;</span> Under Review <span class="nt">&lt;/PayPalReviewStatus&gt;</span>
+<span class="nt">&lt;SellerProtection&gt;</span> Ineligible <span class="nt">&lt;/SellerProtection&gt;</span>
+<span class="nt">&lt;/PayPalReviewInfo&gt;</span>
+<span class="nt">&lt;BuyerEmail&gt;</span> test@test.com <span class="nt">&lt;/BuyerEmail&gt;</span>
+<span class="nt">&lt;CustomFieldsList&gt;</span>
+<span class="nt">&lt;TrackingNumber&gt;</span> tn-12345678 <span class="nt">&lt;/TrackingNumber&gt;</span>
+<span class="nt">&lt;Shipper&gt;</span> ups <span class="nt">&lt;/Shipper&gt;</span>
+<span class="nt">&lt;/CartShipmentInfo&gt;</span>
+<span class="nt">&lt;ShipToInfo&gt;</span>
+<span class="nt">&lt;GeneralInfo&gt;</span>
+<span class="nt">&lt;FirstName&gt;</span> test-fname <span class="nt">&lt;/FirstName&gt;</span>
+<span class="nt">&lt;LastName&gt;</span> test-lname <span class="nt">&lt;/LastName&gt;</span>
+<span class="nt">&lt;PhoneNumber&gt;</span> 555-555-1212 <span class="nt">&lt;/PhoneNumber&gt;</span>
+<span class="nt">&lt;Company&gt;</span> Yahoo <span class="nt">&lt;/Company&gt;</span>
+<span class="nt">&lt;Email&gt;</span> test@test.com <span class="nt">&lt;/Email&gt;</span>
+<span class="nt">&lt;/GeneralInfo&gt;</span>
+<span class="nt">&lt;AddressInfo&gt;</span>
+<span class="nt">&lt;Address1&gt;</span> 701 First Avenue <span class="nt">&lt;/Address1&gt;</span>
+<span class="nt">&lt;Address2&gt;</span> Apt G111 <span class="nt">&lt;/Address2&gt;</span>
+<span class="nt">&lt;City&gt;</span> Sunnyvale <span class="nt">&lt;/City&gt;</span>
+<span class="nt">&lt;Country&gt;</span> US <span class="nt">&lt;/Country&gt;</span>
+<span class="nt">&lt;State&gt;</span> CA <span class="nt">&lt;/State&gt;</span>
+<span class="nt">&lt;Zip&gt;</span> 95014 <span class="nt">&lt;/Zip&gt;</span>
+<span class="nt">&lt;/AddressInfo&gt;</span>
+<span class="nt">&lt;/ShipToInfo&gt;</span>
+<span class="nt">&lt;BillToInfo&gt;</span>
+<span class="nt">&lt;GeneralInfo&gt;</span>
+<span class="nt">&lt;FirstName&gt;</span> bill-test <span class="nt">&lt;/FirstName&gt;</span>
+<span class="nt">&lt;LastName&gt;</span> bill-test <span class="nt">&lt;/LastName&gt;</span>
+<span class="nt">&lt;PhoneNumber&gt;</span> 555-555-1212 <span class="nt">&lt;/PhoneNumber&gt;</span>
+<span class="nt">&lt;Company&gt;</span> Yahoo <span class="nt">&lt;/Company&gt;</span>
+<span class="nt">&lt;Email&gt;</span> bill@test.com <span class="nt">&lt;/Email&gt;</span>
+<span class="nt">&lt;/GeneralInfo&gt;</span>
+<span class="nt">&lt;AddressInfo&gt;</span>
+<span class="nt">&lt;Address1&gt;</span> 701 First Avenue <span class="nt">&lt;/Address1&gt;</span>
+<span class="nt">&lt;Address2&gt;</span> Something <span class="nt">&lt;/Address2&gt;</span>
+<span class="nt">&lt;City&gt;</span> Sunnyvale <span class="nt">&lt;/City&gt;</span>
+<span class="nt">&lt;Country&gt;</span> US <span class="nt">&lt;/Country&gt;</span>
+<span class="nt">&lt;State&gt;</span> CA <span class="nt">&lt;/State&gt;</span>
+<span class="nt">&lt;Zip&gt;</span> 95014 <span class="nt">&lt;/Zip&gt;</span>
+<span class="nt">&lt;/AddressInfo&gt;</span>
+<span class="nt">&lt;/BillToInfo&gt;</span>
+<span class="nt">&lt;BuyerEmail&gt;</span> test@test.com <span class="nt">&lt;/BuyerEmail&gt;</span>
+<span class="nt">&lt;CustomFieldsList&gt;</span>
+<span class="nt">&lt;CustomField&gt;</span>
+<span class="nt">&lt;Key&gt;</span>customkey1<span class="nt">&lt;/Key&gt;</span>
+<span class="nt">&lt;Value&gt;</span>Mycustomvalue1<span class="nt">&lt;/Value&gt;</span>
+<span class="nt">&lt;/CustomField&gt;</span>
+<span class="nt">&lt;CustomFieldsList&gt;</span>
+<span class="nt">&lt;CustomField&gt;</span>
+<span class="nt">&lt;Key&gt;</span>customkey1<span class="nt">&lt;/Key&gt;</span>
+<span class="nt">&lt;Value&gt;</span>Mycustomvalue1<span class="nt">&lt;/Value&gt;</span>
+<span class="nt">&lt;/CustomField&gt;</span>
+<span class="nt">&lt;CustomFieldsList&gt;</span>
+<span class="nt">&lt;ItemList&gt;</span>
+<span class="nt">&lt;Item&gt;</span>
+<span class="nt">&lt;LineNumber&gt;</span> 0 <span class="nt">&lt;/LineNumber&gt;</span>
+<span class="nt">&lt;ItemID&gt;</span> item1 <span class="nt">&lt;/ItemID&gt;</span>
+<span class="nt">&lt;ItemCode&gt;</span> item1 <span class="nt">&lt;/ItemCode&gt;</span>
+<span class="nt">&lt;Quantity&gt;</span> 1 <span class="nt">&lt;/Quantity&gt;</span>
+<span class="nt">&lt;UnitPrice&gt;</span> 11 <span class="nt">&lt;/UnitPrice&gt;</span>
+<span class="nt">&lt;Description&gt;</span> item1 <span class="nt">&lt;/Description&gt;</span>
+<span class="nt">&lt;URL&gt;</span> http://v3test-46.stores.yahoo.net/item1.html <span class="nt">&lt;/URL&gt;</span>
+<span class="nt">&lt;Taxable&gt;</span> true <span class="nt">&lt;/Taxable&gt;</span>
+<span class="nt">&lt;ThumbnailURL&gt;</span> http://v3test-46.stores.yahoo.net/item1.html <span class="nt">&lt;/ThumbnailURL&gt;</span>
+<span class="nt">&lt;/Item&gt;</span>
+<span class="nt">&lt;/ItemList&gt;</span>
+<span class="nt">&lt;OrderTotals&gt;</span>
+<span class="nt">&lt;Subtotal&gt;</span>11.01<span class="nt">&lt;/Subtotal&gt;</span>
+<span class="nt">&lt;Shipping&gt;</span>0.00<span class="nt">&lt;/Shipping&gt;</span>
+<span class="nt">&lt;Tax&gt;</span>0.00<span class="nt">&lt;/Tax&gt;</span>
+<span class="nt">&lt;Promotions&gt;</span>
+<span class="nt">&lt;AppliedPromotion&gt;</span>
+<span class="nt">&lt;Id&gt;</span>2<span class="nt">&lt;/Id&gt;</span>
+<span class="nt">&lt;Name&gt;</span>MyPromotion<span class="nt">&lt;/Name&gt;</span>
+<span class="nt">&lt;Type&gt;</span>PERCENTAGE<span class="nt">&lt;/Type&gt;</span>
+<span class="nt">&lt;Discount&gt;</span>0.10<span class="nt">&lt;/Discount&gt;</span>
+<span class="nt">&lt;Message&gt;</span>10.00% off<span class="nt">&lt;/Message&gt;</span>
+<span class="nt">&lt;/AppliedPromotion&gt;</span>
+<span class="nt">&lt;/Promotions&gt;</span>
+<span class="nt">&lt;Total&gt;</span>10.91<span class="nt">&lt;/Total&gt;</span>
+<span class="nt">&lt;/OrderTotals&gt;</span>
+<span class="nt">&lt;Referer&gt;</span> http://www.yahoo.com <span class="nt">&lt;/Referer&gt;</span>
+<span class="nt">&lt;MerchantNotes&gt;&lt;/MerchantNotes&gt;</span>
+<span class="nt">&lt;EntryPoint&gt;</span> http://www.yahoo.com <span class="nt">&lt;/EntryPoint&gt;</span>
+<span class="nt">&lt;BuyerComments&gt;</span> Test Comments <span class="nt">&lt;/BuyerComments&gt;</span>
+<span class="nt">&lt;PaymentProcessor&gt;</span> PayPal <span class="nt">&lt;/PaymentProcessor&gt;</span>
+<span class="nt">&lt;Currency&gt;</span> USD <span class="nt">&lt;/Currency&gt;</span>
+<span class="nt">&lt;GiftMessage&gt;</span>test gift message<span class="nt">&lt;/GiftMessage&gt;</span>
+<span class="nt">&lt;PaymentType&gt;</span>PayPal<span class="nt">&lt;/PaymentType&gt;</span>
+<span class="nt">&lt;LastUpdatedTime&gt;</span>Tue Sep 10 09:33:14 2013 GMT<span class="nt">&lt;/LastUpdatedTime&gt;</span>
+<span class="nt">&lt;BuyerIP&gt;</span>203.83.248.37<span class="nt">&lt;/BuyerIP&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/OrderListQuery&gt;</span>
+<span class="nt">&lt;/ResponseResourceList&gt;</span>
+<span class="nt">&lt;/ystorews:ystorewsResponse&gt;</span>
+</code></pre><h2 id='get-range'>Get Range</h2>
+<p>The IntervalRange and Counted Range operations are used to retrieve information about a range
+of orders. The information to be retrieved for these orders can be specified in the ‘Include’ tag
+under ‘Field’.</p>
+
+<p><strong>Note</strong>: Currently, the response data returned may not exceed 100 KB. Up to a maximum of 100
+orders can be returned, as long as the response data does not exceed this 100 KB limit.
+REST based URL: https://<storeid>.order.store.yahooapis.com/V1/order</p>
+
+<p><strong>Method</strong>: POST</p>
+<h2 id='getintervalrange'>GetIntervalRange</h2>
+<p>The GetIntervalRange operation allows information about a range of orders to be retrieved, by specifying
+a starting order ID and ending order ID interval to return.</p>
+
+<p><strong>Request fields</strong>:
+<strong>Input</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OrderListQuery/Filter/Include</td>
+<td>String</td>
+<td>Required (1 or more)</td>
+<td>all, status, shipmentinfo, shiptoinfo, billtoinfo, buyeremail, ordertotals</td>
+<td>The specific field requested for each order in the range specified</td>
+</tr>
+<tr>
+<td>OrderListQuery/QueryParams/IntervalRange/Start</td>
+<td>Integer</td>
+<td>Required</td>
+<td>N/A</td>
+<td>Start range number</td>
+</tr>
+<tr>
+<td>OrderListQuery/QueryParams/IntervalRange/End</td>
+<td>Integer</td>
+<td>Required</td>
+<td>N/A</td>
+<td>End range number</td>
+</tr>
+</tbody></table>
+
+<p><strong>Request fields</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OrderID</td>
+<td>Unique order number (identification value)</td>
+</tr>
+<tr>
+<td>RequestID</td>
+<td>Unique request identification code</td>
+</tr>
+<tr>
+<td>BuyerEmail</td>
+<td>Customer’s email address</td>
+</tr>
+</tbody></table>
+
+<p>For error responses, please refer to the common error structure noted for section 2.</p>
+
+<blockquote>
+<p>Sample request XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;ystorewsRequest&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span> yhst-1234567890 <span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;</span> test <span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;Verb&gt;</span> get <span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;OrderListQuery&gt;</span>
+<span class="nt">&lt;Filter&gt;</span>
+<span class="nt">&lt;Include&gt;</span> buyeremail <span class="nt">&lt;/Include&gt;</span>
+<span class="nt">&lt;/Filter&gt;</span>
+<span class="nt">&lt;QueryParams&gt;</span>
+<span class="nt">&lt;IntervalRange&gt;</span>
+<span class="nt">&lt;Start&gt;</span> 485 <span class="nt">&lt;/Start&gt;</span>
+<span class="nt">&lt;End&gt;</span> 486 <span class="nt">&lt;/End&gt;</span>
+<span class="nt">&lt;/IntervalRange&gt;</span>
+<span class="nt">&lt;/QueryParams&gt;</span>
+<span class="nt">&lt;/OrderListQuery&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;ystorews:ystorewsResponse</span> <span class="na">xmlns:ystorews=</span><span class="s">"urn:yahoo:sbs:ystorews"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span> Test Request ID <span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;ResponseResourceList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span> 485 <span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;BuyerEmail&gt;</span> test_shopper@test.com <span class="nt">&lt;/BuyerEmail&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span> 486 <span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;BuyerEmail&gt;</span> test_shopper@test.com <span class="nt">&lt;/BuyerEmail&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/ResponseResourceList&gt;</span>
+<span class="nt">&lt;/ystorews:ystorewsResponse&gt;</span>
+</code></pre><h2 id='getcountedrange'>GetCountedRange</h2>
+<p>The GetCountedRange operation allows information about a range of orders to be retrieved, using
+a starting order ID and specifying the number of orders following this starting order to return.</p>
+
+<p><strong>Request fields</strong>:
+<strong>Input</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OrderListQuery/Filter/Field</td>
+<td>String</td>
+<td>Required (1 or more)</td>
+<td>all, status, shipmentinfo, shiptoinfo, billtoinfo, buyeremail, ordertotals</td>
+<td>The specific field requested for each order in the range specified</td>
+</tr>
+<tr>
+<td>OrderListQuery/QueryParams/CountedRange/Start</td>
+<td>Integer</td>
+<td>Required</td>
+<td>N/A</td>
+<td>Start range number</td>
+</tr>
+<tr>
+<td>OrderListQuery/QueryParams/IntervalRange/Count</td>
+<td>Integer</td>
+<td>Required</td>
+<td>N/A</td>
+<td>Number of orders required starting from Start order number</td>
+</tr>
+</tbody></table>
+
+<p><strong>Request fields</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OrderID</td>
+<td>Unique order number (identification value)</td>
+</tr>
+<tr>
+<td>BuyerEmail</td>
+<td>Customer’s email address</td>
+</tr>
+<tr>
+<td>RequestID</td>
+<td>Unique request identification code</td>
+</tr>
+<tr>
+<td>Error/Code</td>
+<td>If an error response is returned, this is the numerical code assigned to the Errors</td>
+</tr>
+<tr>
+<td>Error Message</td>
+<td>If an error response is returned, this error message corresponding to the error code, explaining the error that has occurred</td>
+</tr>
+</tbody></table>
+
+<p>For error responses, please refer to the common error structure noted for section 2.</p>
+
+<blockquote>
+<p>Sample request XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;ystorewsRequest&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span> demo-store <span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;</span> wscert <span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;Verb&gt;</span> get <span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;OrderListQuery&gt;</span>
+<span class="nt">&lt;Filter&gt;</span>
+<span class="nt">&lt;Include&gt;</span> buyeremail <span class="nt">&lt;/Include&gt;</span>
+<span class="nt">&lt;/Filter&gt;</span>
+<span class="nt">&lt;QueryParams&gt;</span>
+<span class="nt">&lt;CountedRange&gt;</span>
+<span class="nt">&lt;Start&gt;</span> 485 <span class="nt">&lt;/Start&gt;</span>
+<span class="nt">&lt;Count&gt;</span> 2 <span class="nt">&lt;/Count&gt;</span>
+<span class="nt">&lt;/CountedRange&gt;</span>
+<span class="nt">&lt;/QueryParams&gt;</span>
+<span class="nt">&lt;/OrderListQuery&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorews:ystorewsResponse</span> <span class="na">xmlns:ystorews=</span><span class="s">"urn:yahoo:sbs:ystorews"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;Version&gt;</span>
+1.0
+<span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span>
+Test Request ID
+<span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;ResponseResourceList&gt;</span>
+<span class="nt">&lt;OrderListQuery&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>
+485
+<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;BuyerEmail&gt;</span>
+test@test.com
+<span class="nt">&lt;/BuyerEmail&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>
+486
+<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;BuyerEmail&gt;</span>
+test@test.com
+<span class="nt">&lt;/BuyerEmail&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/OrderListQuery&gt;</span>
+<span class="nt">&lt;/ResponseResourceList&gt;</span>
+<span class="nt">&lt;/ystorews:ystorewsResponse&gt;</span>
+</code></pre><h2 id='error-codes'>Error Codes</h2>
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>20001</td>
+<td>Invalid range specified.</td>
+</tr>
+<tr>
+<td>20004</td>
+<td>Mandatory Filter tag absent or empty.</td>
+</tr>
+<tr>
+<td>20005</td>
+<td>Mandatory Include tag absent or empty.</td>
+</tr>
+<tr>
+<td>20006</td>
+<td>Mandatory QueryParams tag absent or empty.</td>
+</tr>
+<tr>
+<td>20008</td>
+<td>Invalid Include name in input.</td>
+</tr>
+<tr>
+<td>20021</td>
+<td>Invalid Start Range specified.</td>
+</tr>
+<tr>
+<td>20022</td>
+<td>Count specified in request is greater than that supported.</td>
+</tr>
+<tr>
+<td>20025</td>
+<td>Invalid count in range query.</td>
+</tr>
+<tr>
+<td>20026</td>
+<td>Invalid End Range specified.</td>
+</tr>
+<tr>
+<td>20028</td>
+<td>Start range cannot be greater than End range.</td>
+</tr>
+</tbody></table>
+<h2 id='customorderstatus'>CustomOrderStatus</h2>
+<p>Operations performed on the CustomOrderStatus resource enable new custom order statuses to be
+created, and provide the capacity to get and update custom status information.</p>
+<h2 id='create-new-custom-status'>Create New Custom Status</h2>
+<p>The Create New Custom Status operation allows a partner to create a new custom order status that may
+be assigned to an order.</p>
+
+<p><strong>REST based URL</strong>: https://<storeid>.order.store.yahooapis.com/V1/customorderstatus
+<strong>Method</strong>: POST</p>
+
+<p><strong>Request fields</strong>:
+Input:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>CustomOrderStatus/Code</td>
+<td>String</td>
+<td>Required</td>
+<td>Consult XSD</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>CustomOrderStatus/MsgToBuyer</td>
+<td>String</td>
+<td>Required</td>
+<td>Consult XSD</td>
+<td>Message displayed to buyer when an order is marked with a custom status</td>
+</tr>
+<tr>
+<td>CustomOrderStatus/IncludeInStats</td>
+<td>Integer</td>
+<td>Required</td>
+<td>true/false</td>
+<td>When its value istrue, an order that is marked with this status is included in stats; if value is false, it is not included in stats</td>
+</tr>
+<tr>
+<td>CustomOrderStatus/InUse</td>
+<td>Integer</td>
+<td>Required</td>
+<td>true/false</td>
+<td>When its value is true, an order can be marked with this status; if value is false, it cannot be marked with this status</td>
+</tr>
+</tbody></table>
+
+<p><strong>Request fields</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>StatusID</td>
+<td>Status identification number</td>
+</tr>
+<tr>
+<td>Error/Code</td>
+<td>If an error response, the numerical code assigned to the Error</td>
+</tr>
+<tr>
+<td>Error Message</td>
+<td>If an error response, the corresponding message explaining the error that has occurred</td>
+</tr>
+</tbody></table>
+
+<p>For error responses, please refer to the common error structure noted for section 2.</p>
+
+<blockquote>
+<p>Sample request XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;ystorewsRequest&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span> yhst-1234567890 <span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;</span> test <span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;Verb&gt;</span> create <span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;CustomOrderStatus&gt;</span>
+<span class="nt">&lt;Code&gt;</span> TestStatusCode <span class="nt">&lt;/Code&gt;</span>
+<span class="nt">&lt;MsgToBuyer&gt;</span> This is test msg. <span class="nt">&lt;/MsgToBuyer&gt;</span>
+<span class="nt">&lt;IncludeInStats&gt;</span> true <span class="nt">&lt;/IncludeInStats&gt;</span>
+<span class="nt">&lt;InUse&gt;</span> true <span class="nt">&lt;/InUse&gt;</span>
+<span class="nt">&lt;/CustomOrderStatus&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;ystorews:ystorewsResponse</span> <span class="na">xmlns:ystorews=</span><span class="s">"urn:yahoo:sbs:ystorews"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span> Test Request ID <span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;ResponseResourceList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span> 485 <span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;BuyerEmail&gt;</span> test_shopper@test.com <span class="nt">&lt;/BuyerEmail&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span> 486 <span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;BuyerEmail&gt;</span> test_shopper@test.com <span class="nt">&lt;/BuyerEmail&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/ResponseResourceList&gt;</span>
+<span class="nt">&lt;/ystorews:ystorewsResponse&gt;</span>
+</code></pre><h2 id='update-custom-status'>Update Custom Status</h2>
+<p>The Update Custom Status operation enables a previously-created custom order status to be updated.</p>
+
+<p><strong>REST based URL</strong>: https://<storeid>.order.store.yahooapis.com/V1/customorderstatus</p>
+
+<p><strong>Method</strong>: POST</p>
+
+<p><strong>Request fields</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>CustomOrderStatus/StatusID</td>
+<td>Integer</td>
+<td>Required</td>
+<td>Consult XSD</td>
+<td>Self explanatory</td>
+</tr>
+<tr>
+<td>CustomOrderStatus/Code</td>
+<td>String</td>
+<td>Optional</td>
+<td>Consult XSD</td>
+<td>Status code</td>
+</tr>
+<tr>
+<td>CustomOrderStatus/MsgToBuyer</td>
+<td>String</td>
+<td>Optionnal</td>
+<td>N/A</td>
+<td>Message displayed to buyer when an order is marked with a custom status</td>
+</tr>
+<tr>
+<td>CustomOrderStatus/IncludedinStats</td>
+<td>Boolean</td>
+<td>Optionnal</td>
+<td>true/false</td>
+<td>When its value is 1, an order that is marked with this status is included in stats; if value is 0, it is not included in stats</td>
+</tr>
+<tr>
+<td>CustomOrderStatus/InUse</td>
+<td>String</td>
+<td>Boolean</td>
+<td>Optionnal</td>
+<td>true/false</td>
+</tr>
+</tbody></table>
+
+<p><strong>Request fields</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RequestID</td>
+<td>Unique request identification code</td>
+</tr>
+<tr>
+<td>ProcessingStatus</td>
+<td>Order processing status</td>
+</tr>
+</tbody></table>
+
+<p>For error responses, please refer to the common error structure noted for section 2.</p>
+
+<blockquote>
+<p>Sample request XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;ystorewsRequest&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span> yhst-1234567890 <span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;</span> test <span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;Verb&gt;</span> update <span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;CustomOrderStatus&gt;</span>
+<span class="nt">&lt;StatusID&gt;</span> 16 <span class="nt">&lt;/StatusID&gt;</span>
+<span class="nt">&lt;Code&gt;</span> TestStatusCode <span class="nt">&lt;/Code&gt;</span>
+<span class="nt">&lt;MsgToBuyer&gt;</span> This is test msg. <span class="nt">&lt;/MsgToBuyer&gt;</span>
+<span class="nt">&lt;IncludeInStats&gt;</span> true <span class="nt">&lt;/IncludeInStats&gt;</span>
+<span class="nt">&lt;InUse&gt;</span> true <span class="nt">&lt;/InUse&gt;</span>
+<span class="nt">&lt;/CustomOrderStatus&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorews:ystorewsResponse</span> <span class="na">xmlns:ystorews=</span><span class="s">"urn:yahoo:sbs:ystorews"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span> Test Request ID <span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;ProcessingStatus&gt;</span> All OK <span class="nt">&lt;/ProcessingStatus&gt;</span>
+<span class="nt">&lt;/ystorews:ystorewsResponse&gt;</span>
+</code></pre><h2 id='error-codes-2'>Error Codes</h2>
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>30002</td>
+<td>Reached maximum number of custom order statuses; Cannot add any more.</td>
+</tr>
+<tr>
+<td>30003</td>
+<td>Failed to add custom order status because of an internal error.</td>
+</tr>
+<tr>
+<td>30004</td>
+<td>No custom order status has been added.</td>
+</tr>
+<tr>
+<td>30005</td>
+<td>Zero fields supplied for update.</td>
+</tr>
+<tr>
+<td>30007</td>
+<td>Status ID must be present in an update request.</td>
+</tr>
+<tr>
+<td>30008</td>
+<td>Status ID must not be present in a create request.</td>
+</tr>
+<tr>
+<td>30009</td>
+<td>Illegal custom status ID supplied in request.</td>
+</tr>
+</tbody></table>
+<h2 id='customorderstatuslistquery'>CustomOrderStatusListQuery</h2><h2 id='getcustomstatus'>GetCustomStatus</h2>
+<p>The GetCustomStatus operation is used to retrieve information about a previously-created custom
+order status.</p>
+
+<p><strong>REST based URL</strong>: https://<storeid>.order.store.yahooapis.com/V1/customorderstatus</p>
+
+<p><strong>Method</strong>: POST</p>
+
+<p><strong>Request fields</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>CustomOrderStatus/StatusID</td>
+<td>Integer</td>
+<td>Required</td>
+<td>Consult XSD</td>
+<td>Self explanatory</td>
+</tr>
+</tbody></table>
+
+<p><strong>Request fields</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RequestID</td>
+<td>Request identification code</td>
+</tr>
+<tr>
+<td>StatusID</td>
+<td>Status identification number</td>
+</tr>
+<tr>
+<td>Code</td>
+<td>Status code</td>
+</tr>
+<tr>
+<td>MsgToBuyer</td>
+<td>Message displayed to buyer when an order is marked with a custom status</td>
+</tr>
+<tr>
+<td>IncludeInStats</td>
+<td>When its value is 1, an order that is marked with this status is included in stats; if value is not 1, it cannot be marked with this status</td>
+</tr>
+<tr>
+<td>InUse</td>
+<td>When its value is 1, an order can be marked with this status; if value is not 1, it cannot be marked with this status</td>
+</tr>
+</tbody></table>
+
+<p>For error responses, please refer to the common error structure noted for section 2.</p>
+
+<blockquote>
+<p>Sample request XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;ystorewsRequest&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span> yhst-1234567890 <span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;</span> test <span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;Verb&gt;</span> get <span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;CustomOrderStatusListQuery&gt;</span>
+<span class="nt">&lt;CustomQueryParams&gt;</span>
+<span class="nt">&lt;StatusID&gt;</span> 16 <span class="nt">&lt;/StatusID&gt;</span>
+<span class="nt">&lt;/CustomQueryParams&gt;</span>
+<span class="nt">&lt;/CustomOrderStatusListQuery&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;ystorews:ystorewsResponse</span> <span class="na">xmlns:ystorews=</span><span class="s">"urn:yahoo:sbs:ystorews"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span> Test Request ID <span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;ResponseResourceList&gt;</span>
+<span class="nt">&lt;CustomOrderStatus&gt;</span>
+<span class="nt">&lt;StatusID&gt;</span> 16 <span class="nt">&lt;/StatusID&gt;</span>
+<span class="nt">&lt;Code&gt;</span> TestStatusCode <span class="nt">&lt;/Code&gt;</span>
+<span class="nt">&lt;MsgToBuyer&gt;</span> This is test msg. <span class="nt">&lt;/MsgToBuyer&gt;</span>
+<span class="nt">&lt;IncludeInStats&gt;</span> false <span class="nt">&lt;/IncludeInStats&gt;</span>
+<span class="nt">&lt;InUse&gt;</span> true <span class="nt">&lt;/InUse&gt;</span>
+<span class="nt">&lt;/CustomOrderStatus&gt;</span>
+<span class="nt">&lt;/ResponseResourceList&gt;</span>
+<span class="nt">&lt;/ystorews:ystorewsResponse&gt;</span>
+</code></pre><h2 id='error-codes-3'>Error Codes</h2>
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>30001</td>
+<td>This custom order status ID does not exist.</td>
+</tr>
+<tr>
+<td>30004</td>
+<td>No custom order status has been added.</td>
+</tr>
+<tr>
+<td>30009</td>
+<td>Illegal custom status ID supplied in request.</td>
+</tr>
+</tbody></table>
+<h1 id='payment-api-non-bulk'>Payment API - Non Bulk</h1>
+<p>The Non-Bulk Payment API package supports single transactions, with operations performed in
+synchronous mode. PayPal payment processors are supported by Non-Bulk Payment APIs. Auth and
+BatchStatus operations also support FDMS transactions. Operations are performed using the following
+resources and verbs:</p>
+
+<table><thead>
+<tr>
+<th>Resource Name</th>
+<th>Allowed Verb(s)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Order/TransactionList</td>
+<td>update</td>
+</tr>
+<tr>
+<td>SBatchListQuery</td>
+<td>get</td>
+</tr>
+</tbody></table>
+
+<p>Error responses are returned using the following common structure:</p>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Error/Code</td>
+<td>The numerical code assigned to the error</td>
+</tr>
+<tr>
+<td>Error Message</td>
+<td>The error message corresponding to the error code, explaining the error that has occurred.</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Sample error response for Non-Bulk Payment API requests:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorews:ystorewsResponse</span> <span class="na">xmlns:ystorews=</span><span class="s">"urn:yahoo:sbs:ystorews"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span>
+abc-1234
+<span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;ErrorResourceList&gt;</span>
+<span class="nt">&lt;Error&gt;</span>
+<span class="nt">&lt;Code&gt;</span>
+40103
+<span class="nt">&lt;/Code&gt;</span>
+<span class="nt">&lt;Message&gt;</span>
+Authorization has already been completed for the given order.
+<span class="nt">&lt;/Message&gt;</span>
+<span class="nt">&lt;/Error&gt;</span>
+<span class="nt">&lt;/ErrorResourceList&gt;</span>
+<span class="nt">&lt;/ystorews:ystorewsResponse&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample gateway error response for Non-Bulk Payment API requests:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorews:ystorewsResponse</span> <span class="na">xmlns:ystorews=</span><span class="s">"urn:yahoo:sbs:ystorews"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span>
+abc-1234
+<span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;ErrorResourceList&gt;</span>
+<span class="nt">&lt;Error&gt;</span>
+<span class="nt">&lt;Code&gt;</span>
+40500
+<span class="nt">&lt;/Code&gt;</span>
+<span class="nt">&lt;Message&gt;</span>
+Payment Gateway has returned an error. Please, check gateway errors for more details.
+<span class="nt">&lt;/Message&gt;</span>
+<span class="nt">&lt;GatewayError&gt;</span>
+<span class="nt">&lt;GatewayErrorCode&gt;</span>
+10009
+<span class="nt">&lt;/GatewayErrorCode&gt;</span>
+<span class="nt">&lt;GatewayErrorMessage&gt;</span>
+The partial refund amount must be less than or equal to the remaining amount
+<span class="nt">&lt;/GatewayErrorMessage&gt;</span>
+<span class="nt">&lt;/GatewayError&gt;</span>
+<span class="nt">&lt;/Error&gt;</span>
+<span class="nt">&lt;/ErrorResourceList&gt;</span>
+<span class="nt">&lt;/ystorews:ystorewsResponse&gt;</span>
+</code></pre><h2 id='order-transactionlist'>Order/TransactionList</h2>
+<p>The Order/TransactionList resource/subresource is used to update payment transaction information.</p>
+<h2 id='auth'>Auth</h2>
+<p>The Auth operation is used to authorize a payment transaction, and provided in case real-time
+authorization is unavailable and authorization did not occur at the time of order placement. Based on the
+credit card information sent in the XML request, the payment gateway associated with the credit card will
+be used for authorization. The authorization response will include the payment processor used for the
+request.</p>
+
+<p><strong>Multi-auth</strong></p>
+
+<p>Multiple authorizations for orders are supported. Merchants may return to any of the authorizations they&#39;ve
+performed for an order to settle against it.</p>
+
+<p>Requests using FDMS as the payment gateway:</p>
+
+<p>After an initial authorization has been completed (Sale/Credit/VoidSale/VoidCredit), FDMS requests falling
+under the bulk XSD must pass the transaction ID (TransactionID) in the request. The TransactionID is
+formulated using <storeid>-<orderid>.</p>
+
+<p><strong>Example</strong>: payment-485</p>
+
+<p>The Auth response call will return a YStoreTransactionID value and the payment gateway used. When
+making new authorizations using FDMS as the gateway, the YStoreTransactionID value can be used as an
+input for the TransactionID tag.</p>
+
+<p><strong>Requests using PayPal as the payment gateway</strong>:</p>
+
+<p>All PayPal requests belong to the non-bulk XSD (syncrhonously). The Authorization ID (AuthorizationID)
+returned in Auth response calls can be used for further actions.</p>
+
+<p><strong>REST based URL</strong>: https://<storeid>.payment.store.yahooapis.com/V1/order/transactionlist</p>
+
+<p><strong>Method</strong>: POST</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Version</td>
+<td>String</td>
+<td>Required</td>
+<td>Request version</td>
+</tr>
+<tr>
+<td>StoreID</td>
+<td>String</td>
+<td>Required</td>
+<td>Store account name or number</td>
+</tr>
+<tr>
+<td>OrderID</td>
+<td>String</td>
+<td>Required</td>
+<td>Unique order number (identification value)</td>
+</tr>
+<tr>
+<td>CardName</td>
+<td>String</td>
+<td>Required</td>
+<td>Credit card type, such as Visa, Mastercard, Amex, Discover</td>
+</tr>
+<tr>
+<td>CardNumber</td>
+<td>String</td>
+<td>Required</td>
+<td>Credit card number printed on the card</td>
+</tr>
+<tr>
+<td>ExpiryMonth</td>
+<td>String</td>
+<td>Required</td>
+<td>Two-digit credit card expiry month (example: July is represented by 07)</td>
+</tr>
+<tr>
+<td>ExpiryYear</td>
+<td>String</td>
+<td>Required</td>
+<td>Four-digit credit card expiry year (example: 2007)</td>
+</tr>
+<tr>
+<td>CVV2</td>
+<td>String</td>
+<td>Required</td>
+<td>Credit card verification value - 3 or 4-digit number printed on the card used to secure “card not present” transactions</td>
+</tr>
+<tr>
+<td>Amount</td>
+<td>String</td>
+<td>Required</td>
+<td>Total amount of order, that will be billed to the customer</td>
+</tr>
+<tr>
+<td>Currency</td>
+<td>String</td>
+<td>Required</td>
+<td>Currency used (for example, USD)</td>
+</tr>
+<tr>
+<td>FirstName</td>
+<td>String</td>
+<td>Required</td>
+<td>First name of customer being billed for the order</td>
+</tr>
+<tr>
+<td>Lastname</td>
+<td>String</td>
+<td>Required</td>
+<td>Last name of the customer being billed for the order</td>
+</tr>
+<tr>
+<td>Street</td>
+<td>String</td>
+<td>Required</td>
+<td>Customer&#39;s billing address street address</td>
+</tr>
+<tr>
+<td>City</td>
+<td>String</td>
+<td>Required</td>
+<td>Customer&#39;s billing address city</td>
+</tr>
+<tr>
+<td>State</td>
+<td>String</td>
+<td>Required</td>
+<td>Customer&#39;s billing address state, two-letter abbreviation (example: CA)</td>
+</tr>
+<tr>
+<td>Zip</td>
+<td>String</td>
+<td>Required</td>
+<td>Customer&#39;s billing address zip code</td>
+</tr>
+<tr>
+<td>Country</td>
+<td>String</td>
+<td>Required</td>
+<td>Customer&#39;s billing address country, three-letter abbreviation (example: USA)</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RequestID</td>
+<td>Unique request identification code</td>
+</tr>
+<tr>
+<td>OrderID</td>
+<td>Unique order number (identification value)</td>
+</tr>
+<tr>
+<td>CVV2Code</td>
+<td>Returned CVV2 code</td>
+</tr>
+<tr>
+<td>AuthorizationID</td>
+<td>Authorization identification value</td>
+</tr>
+<tr>
+<td>AVSCode</td>
+<td>Returned AVS code</td>
+</tr>
+<tr>
+<td>Amount</td>
+<td>Payment amount</td>
+</tr>
+<tr>
+<td>PaymentProcessor</td>
+<td>Payment processor used</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Sample request XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorewsRequest&gt;</span>
+<span class="nt">&lt;Version&gt;</span>1.0<span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span>payment<span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Verb&gt;</span>update<span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>485<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;TransactionList&gt;</span>
+<span class="nt">&lt;Auth&gt;</span>
+<span class="nt">&lt;BillingAddress&gt;</span>
+<span class="nt">&lt;FirstName&gt;</span>Mr Test <span class="nt">&lt;/FirstName&gt;</span>
+<span class="nt">&lt;LastName&gt;</span>User <span class="nt">&lt;/LastName&gt;</span>
+<span class="nt">&lt;Street&gt;</span>701 First Ave<span class="nt">&lt;/Street&gt;</span>
+<span class="nt">&lt;City&gt;</span>Sunnyvale<span class="nt">&lt;/City&gt;</span>
+<span class="nt">&lt;State&gt;</span>CA<span class="nt">&lt;/State&gt;</span>
+<span class="nt">&lt;Zip&gt;</span>94089<span class="nt">&lt;/Zip&gt;</span>
+<span class="nt">&lt;Country&gt;</span>US<span class="nt">&lt;/Country&gt;</span>
+<span class="nt">&lt;/BillingAddress&gt;</span>
+<span class="nt">&lt;CreditCardDetails&gt;</span>
+<span class="nt">&lt;CardName&gt;</span>MasterCard<span class="nt">&lt;/CardName&gt;</span>
+<span class="nt">&lt;CardNumber&gt;</span>xxxxxxxxxxxxxxxx<span class="nt">&lt;/CardNumber&gt;</span>
+<span class="nt">&lt;ExpiryMonth&gt;</span>07<span class="nt">&lt;/ExpiryMonth&gt;</span>
+<span class="nt">&lt;ExpiryYear&gt;</span>2008<span class="nt">&lt;/ExpiryYear&gt;</span>
+<span class="nt">&lt;CVV2&gt;</span>xxx<span class="nt">&lt;/CVV2&gt;</span>
+<span class="nt">&lt;/CreditCardDetails&gt;</span>
+<span class="nt">&lt;AmountDetails&gt;</span>
+<span class="nt">&lt;Amount&gt;</span>1<span class="nt">&lt;/Amount&gt;</span>
+<span class="nt">&lt;Currency&gt;</span>USD<span class="nt">&lt;/Currency&gt;</span>
+<span class="nt">&lt;/AmountDetails&gt;</span>
+<span class="nt">&lt;/Auth&gt;</span>
+<span class="nt">&lt;/TransactionList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorews:ystorewsResponse</span> <span class="na">xmlns:ystorews=</span><span class="s">"urn:yahoo:sbs:ystorews"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span>abc-1234<span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;ResponseResourceList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>485<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;TransactionList&gt;</span>
+<span class="nt">&lt;Auth&gt;</span>
+<span class="nt">&lt;YStoreTransactionID&gt;</span>payment-485<span class="nt">&lt;/YStoreTransactionID&gt;</span>
+<span class="nt">&lt;AuthorizationID&gt;</span>AUTHID-1234<span class="nt">&lt;/AuthorizationID&gt;</span>
+<span class="nt">&lt;Amount&gt;</span>1<span class="nt">&lt;/Amount&gt;</span>
+<span class="nt">&lt;AVSCode&gt;</span>X<span class="nt">&lt;/AVSCode&gt;</span>
+<span class="nt">&lt;CVV2Code&gt;</span>M<span class="nt">&lt;/CVV2Code&gt;</span>
+<span class="nt">&lt;PaymentProcessor&gt;</span>PayPal<span class="nt">&lt;/PaymentProcessor&gt;</span>
+<span class="nt">&lt;/Auth&gt;</span>
+<span class="nt">&lt;/TransactionList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/ResponseResourceList&gt;</span>
+<span class="nt">&lt;/ystorews:ystorewsResponse&gt;</span>
+</code></pre><h2 id='sale'>Sale</h2>
+<p>The Sale operation is an operation for PayPal transactions only, used to capture authorized payment
+funds for an order.</p>
+
+<p><strong>REST based URL</strong>: https://<storeid>.payment.store.yahooapis.com/V1/order/transactionlist</p>
+
+<p><strong>Method</strong>: POST
+<strong>Request fields</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Version</td>
+<td>String</td>
+<td>Required</td>
+<td>Request version</td>
+</tr>
+<tr>
+<td>AuthorizationID</td>
+<td>String</td>
+<td>Required</td>
+<td>Authorization identification value</td>
+</tr>
+<tr>
+<td>Amount</td>
+<td>String</td>
+<td>Required</td>
+<td>Payment amount</td>
+</tr>
+<tr>
+<td>Currency</td>
+<td>String</td>
+<td>Optional (defaults to USD)</td>
+<td>Currency used (for example, USD)</td>
+</tr>
+<tr>
+<td>StoreID</td>
+<td>String</td>
+<td>Required</td>
+<td>Store account name or number</td>
+</tr>
+<tr>
+<td>OrderID</td>
+<td>String</td>
+<td>Required</td>
+<td>Unique order number (identification value)</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Request ID</td>
+<td>Unique request identification code</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>The numerical code assigned to the error</td>
+</tr>
+</tbody></table>
+
+<p>For error responses, please refer to the common error structure noted for section 3.</p>
+
+<blockquote>
+<p>Sample request XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorewsRequest&gt;</span>
+<span class="nt">&lt;Version&gt;</span>1.0<span class="nt">&lt;/Version&gt;</span>
+Yahoo Merchant Solutions — Order and Payment APIs: Reference Guide (October 3, 2013) 46
+<span class="nt">&lt;StoreID&gt;</span>payment<span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;</span> <span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Verb&gt;</span>update<span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>485<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;TransactionList&gt;</span>
+<span class="nt">&lt;Sale&gt;</span>
+<span class="nt">&lt;AuthorizationID&gt;</span>AUTHID-1234<span class="nt">&lt;/AuthorizationID&gt;</span>
+<span class="nt">&lt;AmountDetails&gt;</span>
+<span class="nt">&lt;Amount&gt;</span>1<span class="nt">&lt;/Amount&gt;</span>
+<span class="nt">&lt;Currency&gt;</span>USD<span class="nt">&lt;/Currency&gt;</span>
+<span class="nt">&lt;/AmountDetails&gt;</span>
+<span class="nt">&lt;/Sale&gt;</span>
+<span class="nt">&lt;/TransactionList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorews:ystorewsResponse</span> <span class="na">xmlns:ystorews=</span><span class="s">"urn:yahoo:sbs:ystorews"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span>
+abc-1234
+<span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;ResponseResourceList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>
+485
+<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;TransactionList&gt;</span>
+<span class="nt">&lt;Sale&gt;</span>
+<span class="nt">&lt;AuthorizationID&gt;</span>
+AUTHID-1234
+<span class="nt">&lt;/AuthorizationID&gt;</span>
+<span class="nt">&lt;GrossAmount&gt;</span>
+1.0
+<span class="nt">&lt;/GrossAmount&gt;</span>
+<span class="nt">&lt;TransactionID&gt;</span>
+TRANSID-1234
+<span class="nt">&lt;/TransactionID&gt;</span>
+<span class="nt">&lt;FeeAmount&gt;</span>
+0.33
+<span class="nt">&lt;/FeeAmount&gt;</span>
+<span class="nt">&lt;/Sale&gt;</span>
+<span class="nt">&lt;/TransactionList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/ResponseResourceList&gt;</span>&gt;
+<span class="nt">&lt;/ystorews:ystorewsResponse&gt;</span>
+</code></pre><h2 id='credit'>Credit</h2>
+<p>The Credit operation is used to perform credit (refund) requests for an order authorized and then
+captured by PayPal.</p>
+
+<p><strong>REST based URL</strong>: https://<storeid>.payment.store.yahooapis.com/V1/order/transactionlist</p>
+
+<p><strong>Method</strong>: POST
+<strong>Request fields</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Version</td>
+<td>String</td>
+<td>Required</td>
+<td>Request version</td>
+</tr>
+<tr>
+<td>TransactionID</td>
+<td>String</td>
+<td>Required</td>
+<td>Authorization identification value</td>
+</tr>
+<tr>
+<td>Amount</td>
+<td>String</td>
+<td>Required</td>
+<td>Payment amount</td>
+</tr>
+<tr>
+<td>CurrencyType</td>
+<td>String</td>
+<td>Optional (defaults to USD)</td>
+<td>Currency used (for example, USD)</td>
+</tr>
+<tr>
+<td>StoreID</td>
+<td>String</td>
+<td>Required</td>
+<td>Store account name or number</td>
+</tr>
+<tr>
+<td>OrderID</td>
+<td>String</td>
+<td>Required</td>
+<td>Unique order number (identification value)</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RequestID</td>
+<td>Unique request identification code</td>
+</tr>
+<tr>
+<td>OrderID</td>
+<td>Unique order number (identification value)</td>
+</tr>
+<tr>
+<td>NetRefundAmount</td>
+<td>Net refund amount</td>
+</tr>
+<tr>
+<td>GrossAmount</td>
+<td>Gross refund amount</td>
+</tr>
+<tr>
+<td>FeeRefundAmount</td>
+<td>Fee refund amount</td>
+</tr>
+<tr>
+<td>RefundTransactionID</td>
+<td>Unique refund transaction ID number</td>
+</tr>
+</tbody></table>
+
+<p>For error responses, please refer to the common error structure noted for section 3.</p>
+
+<blockquote>
+<p>Sample request XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorewsRequest&gt;</span>
+<span class="nt">&lt;Version&gt;</span>1.0<span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span>payment<span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;</span> <span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Verb&gt;</span>update<span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>485<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;TransactionList&gt;</span>
+<span class="nt">&lt;Credit&gt;</span>
+<span class="nt">&lt;TransactionID&gt;</span>TRANSID-1234<span class="nt">&lt;/TransactionID&gt;</span>
+<span class="nt">&lt;AmountDetails&gt;</span>
+<span class="nt">&lt;Amount&gt;</span>1<span class="nt">&lt;/Amount&gt;</span>
+<span class="nt">&lt;Currency&gt;</span>USD<span class="nt">&lt;/Currency&gt;</span>
+<span class="nt">&lt;/AmountDetails&gt;</span>
+<span class="nt">&lt;/Credit&gt;</span>
+<span class="nt">&lt;/TransactionList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorews:ystorewsResponse</span> <span class="na">xmlns:ystorews=</span><span class="s">"urn:yahoo:sbs:ystorews"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span>
+abc-1234
+<span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;ResponseResourceList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>
+485
+<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;TransactionList&gt;</span>
+<span class="nt">&lt;Credit&gt;</span>
+<span class="nt">&lt;NetRefundAmount&gt;</span>
+0.87
+<span class="nt">&lt;/NetRefundAmount&gt;</span>
+<span class="nt">&lt;GrossRefundAmount&gt;</span>
+1.00
+<span class="nt">&lt;/GrossRefundAmount&gt;</span>
+<span class="nt">&lt;FeeRefundAmount&gt;</span>
+0.13
+<span class="nt">&lt;/FeeRefundAmount&gt;</span>
+<span class="nt">&lt;RefundTransactionID&gt;</span>
+TRANSID-1235
+<span class="nt">&lt;/RefundTransactionID&gt;</span>
+<span class="nt">&lt;/Credit&gt;</span>
+<span class="nt">&lt;/TransactionList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/ResponseResourceList&gt;</span>
+<span class="nt">&lt;/ystorews:ystorewsResponse&gt;</span>
+</code></pre><h2 id='voidauth'>VoidAuth</h2>
+<p>The VoidAuth operation is used to void an authorized payment for an order, and will only void an amount
+that has not yet been captured. VoidAuth is an operation for PayPal transactions only.</p>
+
+<p><strong>REST based URL</strong>: https://<storeid>.payment.store.yahooapis.com/V1/order/transactionlist
+<strong>Method</strong>: POST</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Version</td>
+<td>String</td>
+<td>Required</td>
+<td>Request version</td>
+</tr>
+<tr>
+<td>AuthorizationID</td>
+<td>String</td>
+<td>Required</td>
+<td>Authorization identification value</td>
+</tr>
+<tr>
+<td>Amount</td>
+<td>String</td>
+<td>Required</td>
+<td>Payment amount</td>
+</tr>
+<tr>
+<td>CurrencyType</td>
+<td>String</td>
+<td>Optional (defaults to USD)</td>
+<td>Currency used (for example, USD)</td>
+</tr>
+<tr>
+<td>StoreID</td>
+<td>String</td>
+<td>Required</td>
+<td>Store account name or number</td>
+</tr>
+<tr>
+<td>OrderID</td>
+<td>String</td>
+<td>Required</td>
+<td>Unique order number (identification value)</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RequestID</td>
+<td>Unique request identification code</td>
+</tr>
+<tr>
+<td>OrderID</td>
+<td>Unique order number (identification value)</td>
+</tr>
+<tr>
+<td>AuthorizationID</td>
+<td>Authorization identification value</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Sample request XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorewsRequest&gt;</span>
+<span class="nt">&lt;Version&gt;</span>1.0<span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span>payment<span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;</span> <span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Verb&gt;</span>update<span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>485<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;TransactionList&gt;</span>
+<span class="nt">&lt;VoidAuth&gt;</span>
+<span class="nt">&lt;AuthorizationID&gt;</span>ABC-1234<span class="nt">&lt;/AuthorizationID&gt;</span>
+<span class="nt">&lt;/VoidAuth&gt;</span>
+<span class="nt">&lt;/TransactionList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorews:ystorewsResponse</span> <span class="na">xmlns:ystorews=</span><span class="s">"urn:yahoo:sbs:ystorews"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span>
+abd-1234
+<span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;ResponseResourceList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>
+485
+<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;TransactionList&gt;</span>
+<span class="nt">&lt;VoidAuth&gt;</span>
+<span class="nt">&lt;AuthorizationID&gt;</span>
+AUTHID-1234
+<span class="nt">&lt;/AuthorizationID&gt;</span>
+<span class="nt">&lt;/VoidAuth&gt;</span>
+<span class="nt">&lt;/TransactionList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/ResponseResourceList&gt;</span>
+<span class="nt">&lt;/ystorews:ystorewsResponse&gt;</span>
+</code></pre><h2 id='reauth'>Reauth</h2>
+<p>The Reauth operation is used to reauthorize that payment funds are still available to capture, after the
+initial authorization period has expired and authorization is no longer valid. VoidAuth is an operation for
+PayPal transactions only.</p>
+
+<p><strong>REST based URL</strong>: https://<storeid>.payment.store.yahooapis.com/V1/order/transactionlist
+<strong>Method</strong>: POST</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Version</td>
+<td>String</td>
+<td>Required</td>
+<td>Request version</td>
+</tr>
+<tr>
+<td>AuthorizationID</td>
+<td>String</td>
+<td>Required</td>
+<td>Authorization identification value</td>
+</tr>
+<tr>
+<td>Amount</td>
+<td>String</td>
+<td>Required</td>
+<td>Payment amount</td>
+</tr>
+<tr>
+<td>CurrencyType</td>
+<td>String</td>
+<td>Optional (defaults to USD)</td>
+<td>Currency used (for example, USD)</td>
+</tr>
+<tr>
+<td>StoreID</td>
+<td>String</td>
+<td>Required</td>
+<td>Store account name or number</td>
+</tr>
+<tr>
+<td>OrderID</td>
+<td>String</td>
+<td>Required</td>
+<td>Unique order number (identification value)</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RequestID</td>
+<td>Unique request identification code</td>
+</tr>
+<tr>
+<td>OrderID</td>
+<td>Unique order number (identification value)</td>
+</tr>
+<tr>
+<td>AuthorizationID</td>
+<td>Authorization identification value</td>
+</tr>
+</tbody></table>
+
+<p>For error responses, please refer to the common error structure noted for section 3.</p>
+
+<blockquote>
+<p>Sample request XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorewsRequest&gt;</span>
+<span class="nt">&lt;Version&gt;</span>1.0<span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span>payment<span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;</span> <span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Verb&gt;</span>update<span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+Yahoo Merchant Solutions — Order and Payment APIs: Reference Guide (October 3, 2013) 52
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>485<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;TransactionList&gt;</span>
+<span class="nt">&lt;Reauth&gt;</span>
+<span class="nt">&lt;AuthorizationID&gt;</span>AUTHID-1234<span class="nt">&lt;/AuthorizationID&gt;</span>
+<span class="nt">&lt;AmountDetails&gt;</span>
+<span class="nt">&lt;Amount&gt;</span>1<span class="nt">&lt;/Amount&gt;</span>
+<span class="nt">&lt;Currency&gt;</span>usd<span class="nt">&lt;/Currency&gt;</span>
+<span class="nt">&lt;/AmountDetails&gt;</span>
+<span class="nt">&lt;/Reauth&gt;</span>
+<span class="nt">&lt;/TransactionList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorews:ystorewsResponse</span> <span class="na">xmlns:ystorews=</span><span class="s">"urn:yahoo:sbs:ystorews"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span>
+abd-1234
+<span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;ResponseResourceList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>
+485
+<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;TransactionList&gt;</span>
+<span class="nt">&lt;Reauth&gt;</span>
+<span class="nt">&lt;AuthorizationID&gt;</span>
+AUTHID-1234
+<span class="nt">&lt;/AuthorizationID&gt;</span>
+<span class="nt">&lt;/Reauth&gt;</span>
+<span class="nt">&lt;/TransactionList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/ResponseResourceList&gt;</span>
+<span class="nt">&lt;/ystorews:ystorewsResponse&gt;</span>
+</code></pre><h2 id='reverseauth'>ReverseAuth</h2>
+<p>The ReverseAuth operation is used to reverse an authorized payment for an order, and will reverse only
+auth authorized payment amount that has not yet been settled through Sale. This operation is valid for
+Visa, Mastercard, American Express, Discover, Diner&#39;s Club, and JCB transactions made via FDMS.
+In the case of multiple payment authorizations for an order, only the latest authorization may be reversed
+using ReverseAuth.</p>
+
+<p><strong>REST based URL</strong>: https://<storeid>.payment.store.yahooapis.com/V1/order/transactionlist</p>
+
+<p><strong>Method</strong> : POST
+<strong>Request fields</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Version</td>
+<td>String</td>
+<td>Required</td>
+<td>Request version</td>
+</tr>
+<tr>
+<td>StoreID</td>
+<td>String</td>
+<td>Required</td>
+<td>Store account name or number</td>
+</tr>
+<tr>
+<td>OrderID</td>
+<td>String</td>
+<td>Required</td>
+<td>Unique order number (identification value)</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RequestID</td>
+<td>Unique request identification code</td>
+</tr>
+<tr>
+<td>OrderID</td>
+<td>Unique order number (identification value)</td>
+</tr>
+<tr>
+<td>Amount</td>
+<td>Payment Amount</td>
+</tr>
+<tr>
+<td>PaymentProcessor</td>
+<td>Payment processor used</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Sample request XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorewsRequest&gt;</span>
+<span class="nt">&lt;Version&gt;</span>1.0<span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span>MyStore<span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;</span>1.0_d9qNXels_bdseXjw-<span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Verb&gt;</span>update<span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>1234<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;TransactionList&gt;</span>
+<span class="nt">&lt;ReverseAuth&gt;</span>
+<span class="nt">&lt;/ReverseAuth&gt;</span>
+<span class="nt">&lt;/TransactionList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorews:ystorewsResponse</span> <span class="na">xmlns:ystorews=</span><span class="s">"urn:yahoo:sbs:ystorews"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span>RequestID-1285513181158855<span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;Version&gt;</span>1.0<span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;ResponseResourceList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>1234<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;TransactionList&gt;</span>
+<span class="nt">&lt;ReverseAuth&gt;</span>
+<span class="nt">&lt;YStoreTransactionID&gt;</span>MyStore-1234<span class="nt">&lt;/YStoreTransactionID&gt;</span>
+<span class="nt">&lt;AuthorizationID&gt;</span>OK153C<span class="nt">&lt;/AuthorizationID&gt;</span>
+<span class="nt">&lt;Amount&gt;</span>0.01<span class="nt">&lt;/Amount&gt;</span>
+<span class="nt">&lt;PaymentProcessor&gt;</span>FDMS<span class="nt">&lt;/PaymentProcessor&gt;</span>
+<span class="nt">&lt;/ReverseAuth&gt;</span>
+<span class="nt">&lt;/TransactionList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/ResponseResourceList&gt;</span>
+<span class="nt">&lt;/ystorews:ystorewsResponse&gt;</span>
+</code></pre><h2 id='reverseauth-error-codes'>ReverseAuth Error Codes</h2>
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>40000</td>
+<td>Store is not associated with PayPal.</td>
+</tr>
+<tr>
+<td>40001</td>
+<td>Specified order is not associated with PayPal.</td>
+</tr>
+<tr>
+<td>40002</td>
+<td>Specified Order is not associated with FDMS.</td>
+</tr>
+<tr>
+<td>40003</td>
+<td>Credit card has been declined (Response code: D). Please, check the card details.</td>
+</tr>
+<tr>
+<td>40004</td>
+<td>Credit card is expired (Response code: X).</td>
+</tr>
+<tr>
+<td>40005</td>
+<td>The credit card network could not be contacted. Please try again later.</td>
+</tr>
+<tr>
+<td>40006</td>
+<td>Credit card number and billing address do not match.</td>
+</tr>
+<tr>
+<td>40007</td>
+<td>Error occurred processing the authorization. Please try again later.</td>
+</tr>
+<tr>
+<td>40008</td>
+<td>Invalid credit card information. Please check your card type and number.</td>
+</tr>
+<tr>
+<td>40009</td>
+<td>Credit card is not associated with any payment processor on requested store.</td>
+</tr>
+<tr>
+<td>40010</td>
+<td>TransactionID supplied is not associated with order.</td>
+</tr>
+<tr>
+<td>40011</td>
+<td>Authorization not found for given order.</td>
+</tr>
+<tr>
+<td>40012</td>
+<td>Transaction id not found in store.</td>
+</tr>
+<tr>
+<td>40013</td>
+<td>Failed to connect to Payment gateway. Please, try later.</td>
+</tr>
+<tr>
+<td>40014</td>
+<td>Amount is not allowed.</td>
+</tr>
+<tr>
+<td>40015</td>
+<td>CreditCard Details is missing in request.</td>
+</tr>
+<tr>
+<td>40016</td>
+<td>Billing Address is missing in request.</td>
+</tr>
+<tr>
+<td>40017</td>
+<td>PaymentDetails is missing in request.</td>
+</tr>
+<tr>
+<td>40018</td>
+<td>TransactionID is missing in request.</td>
+</tr>
+<tr>
+<td>40019</td>
+<td>StoreID supplied in request is not associated with FDMS.</td>
+</tr>
+<tr>
+<td>40020</td>
+<td>Credit card used for this order number is not associated with FDMS. Please, check your request, if it is sent to appropriate gateway.</td>
+</tr>
+<tr>
+<td>40021</td>
+<td>Store is configured to accept only US dollars. Please, provide valid currency.</td>
+</tr>
+<tr>
+<td>40022</td>
+<td>CreditCard associated with this order could not be retrieved.</td>
+</tr>
+<tr>
+<td>40023</td>
+<td>Invalid transaction amount. Please provide a valids transaction amount, with a value greater than $0.00.</td>
+</tr>
+<tr>
+<td>40025</td>
+<td>We apologize, but a problem occurred while trying to clear the authorization. To complete this transaction, please perform the reverse authorization action for this order again.</td>
+</tr>
+<tr>
+<td>40100</td>
+<td>Amount for authorization is lower than auth floor amount set up by merchant.</td>
+</tr>
+<tr>
+<td>40101</td>
+<td>AuthorizationID supplied is not associated with order.</td>
+</tr>
+<tr>
+<td>40102</td>
+<td>Authorization has already expired.</td>
+</tr>
+<tr>
+<td>40103</td>
+<td>Authorization has already been completed for the given order.</td>
+</tr>
+<tr>
+<td>40104</td>
+<td>Authorization has already been voided for given order.</td>
+</tr>
+<tr>
+<td>40200</td>
+<td>Sale is already complete for the given transaction id.</td>
+</tr>
+<tr>
+<td>40200</td>
+<td>Zero fields supplied for update.</td>
+</tr>
+<tr>
+<td>40201</td>
+<td>Sale has already been voided for the given transaction.</td>
+</tr>
+<tr>
+<td>40202</td>
+<td>No sale found for given transaction id. Void Sale can happen only if there is pending Sale..</td>
+</tr>
+<tr>
+<td>40203</td>
+<td>Sale is already scheduled for the requested order.</td>
+</tr>
+<tr>
+<td>40204</td>
+<td>Amount for sale exceeds the authorized amount.</td>
+</tr>
+<tr>
+<td>40205</td>
+<td>Sale is required for the action you requested.</td>
+</tr>
+<tr>
+<td>40300</td>
+<td>No custom order status has been added.</td>
+</tr>
+<tr>
+<td>40301</td>
+<td>Credit has already been voided for the given transaction..</td>
+</tr>
+<tr>
+<td>40302</td>
+<td>Credit is not possible for pending sale. You can do VoidCredit for this item.</td>
+</tr>
+<tr>
+<td>40303</td>
+<td>Given order has no Sale. You cannot credit without a sale.</td>
+</tr>
+<tr>
+<td>40304</td>
+<td>Credit is already complete for the given order.</td>
+</tr>
+<tr>
+<td>40305</td>
+<td>Credit not found for given order.</td>
+</tr>
+<tr>
+<td>40306</td>
+<td>Credit greater than sale amount is not allowed.</td>
+</tr>
+<tr>
+<td>40500</td>
+<td>Payment Gateway has returned an error. Please, check gateway errors for more details.</td>
+</tr>
+<tr>
+<td>40600</td>
+<td>The authorization for this order has already been cleared.</td>
+</tr>
+<tr>
+<td>40601</td>
+<td>Reverse authorization cannot be performed for this transaction because of the payment method used..</td>
+</tr>
+</tbody></table>
+<h2 id='batchlistquery'>BatchListQuery</h2>
+<p>The BatchListQuery resource is used to retrieve transaction information contained in transaction batches.</p>
+<h2 id='batchstatus'>BatchStatus</h2>
+<p>The BatchStatus operation includes allows for two types of batch queries: by days, to get a snapshot of
+batches submitted or by batch ID, if the ID is known</p>
+<h2 id='batchstatusdays'>BatchStatusDays</h2>
+<p>The BatchStatusDays operation allows batch transactions to be queried by specified days up to
+and including the last 7 days, or for a snapshot of batches submitted for the store during this time to
+be retrieved. A list of batch IDs submitted will be returned.</p>
+
+<p><strong>REST based URL</strong>: https://<storeid>.payment.store.yahooapis.com/V1/batchlist</p>
+
+<p><strong>Method</strong>: POST</p>
+
+<p><strong>Request fields</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Version</td>
+<td>String</td>
+<td>Required</td>
+<td>Request version</td>
+</tr>
+<tr>
+<td>StoreID</td>
+<td>String</td>
+<td>Required</td>
+<td>Store account name or number</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>Integer</td>
+<td>Required</td>
+<td>Specified number of days to be queried</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RequestID</td>
+<td>Unique request identification code</td>
+</tr>
+<tr>
+<td>BatchID</td>
+<td>Unique batch identification value</td>
+</tr>
+<tr>
+<td>SubmissionTime</td>
+<td>Time of batch submission</td>
+</tr>
+<tr>
+<td>SalesCount</td>
+<td>Total count of sales in batch</td>
+</tr>
+<tr>
+<td>SalesAmount</td>
+<td>Total sales amount</td>
+</tr>
+<tr>
+<td>CreditCount</td>
+<td>Total credit amount</td>
+</tr>
+<tr>
+<td>ErrorCount</td>
+<td>Total error count</td>
+</tr>
+<tr>
+<td>TransactionID</td>
+<td>Unique transaction identification value</td>
+</tr>
+</tbody></table>
+
+<p>For error responses, please refer to the common error structure noted for section 3.</p>
+
+<blockquote>
+<p>Sample request XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorewsRequest&gt;</span>
+<span class="nt">&lt;Version&gt;</span>1.0<span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span>fdms<span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;</span> <span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Verb&gt;</span>get<span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;BatchListQuery&gt;</span>
+<span class="nt">&lt;QueryParams&gt;</span>
+<span class="nt">&lt;Days&gt;</span>2<span class="nt">&lt;/Days&gt;</span>
+<span class="nt">&lt;/QueryParams&gt;</span>
+<span class="nt">&lt;/BatchListQuery&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorews:ystorewsResponse</span> <span class="na">xmlns:ystorews=</span><span class="s">"urn:yahoo:sbs:ystorews"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span>abc-1234<span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;ResponseResourceList&gt;</span>
+<span class="nt">&lt;BatchList&gt;</span>
+<span class="nt">&lt;Batch&gt;</span>
+<span class="nt">&lt;BatchID&gt;</span>00001<span class="nt">&lt;/BatchID&gt;</span>
+<span class="nt">&lt;SubmissionTime&gt;</span>
+Wed Aug 10 21:16:18 2007 GMT
+<span class="nt">&lt;/SubmissionTime&gt;</span>
+<span class="nt">&lt;SalesCount&gt;</span>2<span class="nt">&lt;/SalesCount&gt;</span>
+<span class="nt">&lt;SalesAmount&gt;</span>120.00<span class="nt">&lt;/SalesAmount&gt;</span>
+<span class="nt">&lt;CreditCount&gt;</span>1<span class="nt">&lt;/CreditCount&gt;</span>
+<span class="nt">&lt;CreditAmount&gt;</span>35<span class="nt">&lt;/CreditAmount&gt;</span>
+<span class="nt">&lt;ErrorCount&gt;</span>1<span class="nt">&lt;/ErrorCount&gt;</span>
+<span class="nt">&lt;BatchErrorList&gt;</span>
+<span class="nt">&lt;BatchError&gt;</span>
+<span class="nt">&lt;TransactionID&gt;</span>lil-store-inthe-mtns-man-20070415195919<span class="nt">&lt;/TransactionID&gt;</span>
+<span class="nt">&lt;TransactionType&gt;</span>Sale<span class="nt">&lt;/TransactionType&gt;</span>
+<span class="nt">&lt;ErrorDetails&gt;</span>General system error (code 98)<span class="nt">&lt;/ErrorDetails&gt;</span>
+<span class="nt">&lt;/BatchError&gt;</span>
+<span class="nt">&lt;BatchError&gt;</span>
+<span class="nt">&lt;TransactionID&gt;</span>lil-store-inthe-mtns-man-20070415195919<span class="nt">&lt;/TransactionID&gt;</span>
+<span class="nt">&lt;TransactionType&gt;</span>Credit<span class="nt">&lt;/TransactionType&gt;</span>
+<span class="nt">&lt;ErrorDetails&gt;</span>General system error (code 98)<span class="nt">&lt;/ErrorDetails&gt;</span>
+<span class="nt">&lt;/BatchError&gt;</span>
+<span class="nt">&lt;/BatchErrorList&gt;</span>
+<span class="nt">&lt;/Batch&gt;</span>
+<span class="nt">&lt;/BatchList&gt;</span>
+<span class="nt">&lt;/ResponseResourceList&gt;</span>
+<span class="nt">&lt;/ystorews:ystorewsResponse&gt;</span>
+</code></pre><h2 id='batchstatusid'>BatchStatusID</h2>
+<p>The BatchStatusID operation allows transactions to be queried by batch ID, for details of all transactions
+that went into a batch. Identification numbers are assigned to each batch by the payment processor,
+after settlement. A list of batch IDs may be retrieved using the BatchStatusDays operation, which will
+return a list of batch IDs for batches submitted during the last 7 days.</p>
+
+<p><strong>REST based URL</strong>: https://<storeid>.payment.store.yahooapis.com/V1/batchlist</p>
+
+<p><strong>Method</strong>: POST
+<strong>Request fields</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Version</td>
+<td>String</td>
+<td>Required</td>
+<td>Request version</td>
+<td></td>
+</tr>
+<tr>
+<td>StoreID</td>
+<td>String</td>
+<td>Required</td>
+<td>Store account name or number</td>
+<td></td>
+</tr>
+<tr>
+<td>BatchID</td>
+<td>String</td>
+<td>Required</td>
+<td>Batch identification value for batch being queried</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>TransactionID</td>
+<td>Unique transaction identification value</td>
+</tr>
+<tr>
+<td>TransactionType</td>
+<td>Transaction type</td>
+</tr>
+<tr>
+<td>InvoiceID</td>
+<td>Unique invoice identification value</td>
+</tr>
+<tr>
+<td>Amount</td>
+<td>Payment amount</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Sample request XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorewsRequest&gt;</span>
+<span class="nt">&lt;Version&gt;</span>1.0<span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span>fdms<span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;</span> <span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Verb&gt;</span>get<span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;BatchListQuery&gt;</span>
+<span class="nt">&lt;QueryParams&gt;</span>
+<span class="nt">&lt;BatchID&gt;</span>0001<span class="nt">&lt;/BatchID&gt;</span>
+<span class="nt">&lt;/QueryParams&gt;</span>
+<span class="nt">&lt;/BatchListQuery&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML:
+<code>xml
+&lt;ystorews:ystorewsResponse xmlns:ystorews=&quot;urn:yahoo:sbs:ystorews&quot; &gt;
+&lt;Version&gt;1.0&lt;/Version&gt;
+&lt;ResponseResourceList&gt;
+&lt;BatchList&gt;
+&lt;Batch&gt;
+&lt;BatchTransaction&gt;
+&lt;TransactionID&gt;real-time-fdms-1-489&lt;/TransactionID&gt;
+&lt;TransactionType&gt;Credit&lt;/TransactionType&gt;
+&lt;InvoiceID&gt;2&lt;/InvoiceID&gt;
+&lt;Amount&gt;0.1&lt;/Amount&gt;
+&lt;/BatchTransaction&gt;
+&lt;/Batch&gt;
+&lt;/BatchList&gt;
+&lt;/ResponseResourceList&gt;
+&lt;/ystorews:ystorewsResponse&gt;
+</code></p>
+</blockquote>
+<h2 id='payment-api-non-bulk-error-codes'>Payment API - Non Bulk Error Codes</h2>
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>40400</td>
+<td>Batch ID not found in given store. Please, supply valid batch ID.</td>
+</tr>
+<tr>
+<td>40401</td>
+<td>No batches found in store for requested days.</td>
+</tr>
+<tr>
+<td>40402</td>
+<td>Please provide valid number of days. BatchListQuery allows maximum of 7 days in query.</td>
+</tr>
+</tbody></table>
+<h1 id='payment-api-bulk'>Payment API - Bulk</h1>
+<p>The Bulk Payment API package supports multiple, rather than single transactions, and uses batch queues.
+Operations are performed in asynchronous mode. Bulk APIs currently support FDMS transactions only.</p>
+
+<table><thead>
+<tr>
+<th>Resource Name</th>
+<th>Allowed Verb(s)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Order/TransactionList</td>
+<td>update</td>
+</tr>
+<tr>
+<td>SBatchListQuery</td>
+<td>get</td>
+</tr>
+</tbody></table>
+
+<p>Error responses are returned using the following common structure:</p>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Error/Code</td>
+<td>The numerical code assigned to the error</td>
+</tr>
+<tr>
+<td>Error Message</td>
+<td>The error message corresponding to the error code, explaining the error that has occurred.</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Sample request XML for multiple orders made in the same store:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorewsBulkRequest&gt;</span>
+<span class="nt">&lt;Version&gt;</span>1.0<span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span>payment<span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Verb&gt;</span>update<span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;OrderList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>552<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;TransactionList&gt;</span>
+<span class="nt">&lt;Sale&gt;</span>
+<span class="nt">&lt;TransactionID&gt;</span>fdms-552<span class="nt">&lt;/TransactionID&gt;</span>
+<span class="nt">&lt;PaymentDetails&gt;</span>
+<span class="nt">&lt;Amount&gt;</span>1<span class="nt">&lt;/Amount&gt;</span>
+<span class="nt">&lt;Currency&gt;</span>USD<span class="nt">&lt;/Currency&gt;</span>
+<span class="nt">&lt;/PaymentDetails&gt;</span>
+<span class="nt">&lt;/Sale&gt;</span>
+<span class="nt">&lt;/TransactionList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>553<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;TransactionList&gt;</span>
+<span class="nt">&lt;Sale&gt;</span>
+<span class="nt">&lt;TransactionID&gt;</span>fdms-553<span class="nt">&lt;/TransactionID&gt;</span>
+<span class="nt">&lt;AmountDetails&gt;</span>
+<span class="nt">&lt;Amount&gt;</span>1<span class="nt">&lt;/Amount&gt;</span>
+<span class="nt">&lt;Currency&gt;</span>USD<span class="nt">&lt;/Currency&gt;</span>
+<span class="nt">&lt;/AmountDetails&gt;</span>
+<span class="nt">&lt;/Sale&gt;</span>
+<span class="nt">&lt;/TransactionList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/OrderList&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsBulkRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample XML response:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorewsbulk:ystorewsBulkResponse</span> <span class="na">xmlns:ystorewsbulk=</span><span class="s">"urn:yahoo:sbs:ystorewsbulk"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span>
+abc-1234
+<span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;Status&gt;</span>
+OK
+<span class="nt">&lt;/Status&gt;</span>
+<span class="nt">&lt;/ystorewsbulk:ystorewsBulkResponse&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample error response for all Bulk API requests:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code>
+<span class="nt">&lt;ystorewsBulkResponse</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span>
+abc-1234
+<span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;ErrorResourceList&gt;</span>
+<span class="nt">&lt;Error&gt;</span>
+<span class="nt">&lt;Code&gt;</span>
+1103
+<span class="nt">&lt;/Code&gt;</span>
+<span class="nt">&lt;Message&gt;</span>
+Order id not found in store.
+<span class="nt">&lt;/Message&gt;</span>
+<span class="nt">&lt;ResourceID&gt;</span>
+385
+<span class="nt">&lt;/ResourceID&gt;</span>
+<span class="nt">&lt;RequestedAction&gt;</span>
+Sale
+<span class="nt">&lt;/RequestedAction&gt;</span>
+<span class="nt">&lt;/Error&gt;</span>
+<span class="nt">&lt;/ystorewsbulk:ystorewsBulkResponse&gt;</span>
+</code></pre><h2 id='orderlist-order-transactionlist'>OrderList/Order/TransactionList</h2>
+<p>The OrderList/Order/TransactionList resource/subresource is used to update payment
+transaction information. Operations performed on this resource/subresource are Sale, VoidSale,
+Credit and VoidCredit</p>
+<h2 id='sale-2'>Sale</h2>
+<p>The Sale operation is used post-order processing, to capture payment funds. These funds are
+captured upon batch submission.</p>
+
+<p><strong>REST based URL</strong>: https://<storeid>.payment.store.yahooapis.com/V1/orderlist/transactionlist</p>
+
+<p><strong>Method</strong>: POST</p>
+
+<p><strong>Request fields</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Version</td>
+<td>String</td>
+<td>Required</td>
+<td>Request version</td>
+</tr>
+<tr>
+<td>StoreID</td>
+<td>String</td>
+<td>Required</td>
+<td>Store account name or number</td>
+</tr>
+<tr>
+<td>OrderID</td>
+<td>String</td>
+<td>Required</td>
+<td>Unique order number (identification value)</td>
+</tr>
+<tr>
+<td>TransactionID</td>
+<td>String</td>
+<td>Required</td>
+<td>Unique transaction number (identification value)</td>
+</tr>
+<tr>
+<td>Amount</td>
+<td>String</td>
+<td>Required</td>
+<td>Payment amount</td>
+</tr>
+<tr>
+<td>Currency</td>
+<td>String</td>
+<td>Required</td>
+<td>Currency used (for example, USD)</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RequestID</td>
+<td>Unique request identification code</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Status of the request made</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Sample request XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code>
+<span class="nt">&lt;ystorewsBulkRequest&gt;</span>
+<span class="nt">&lt;Version&gt;</span>1.0<span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span>fdms<span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;</span> <span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Verb&gt;</span>update<span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;OrderList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>485<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;TransactionList&gt;</span>
+<span class="nt">&lt;Sale&gt;</span>
+<span class="nt">&lt;TransactionID&gt;</span>fdms-485<span class="nt">&lt;/TransactionID&gt;</span>
+<span class="nt">&lt;AmountDetails&gt;</span>
+<span class="nt">&lt;Amount&gt;</span>1<span class="nt">&lt;/Amount&gt;</span>
+<span class="nt">&lt;Currency&gt;</span>USD<span class="nt">&lt;/Currency&gt;</span>
+<span class="nt">&lt;/AmountDetails&gt;</span>
+<span class="nt">&lt;/Sale&gt;</span>
+<span class="nt">&lt;/TransactionList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/OrderList&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsBulkRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorewsbulk:ystorewsBulkResponse</span> <span class="na">xmlns:ystorewsbulk=</span><span class="s">"urn:yahoo:sbs:ystorewsbulk"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span>
+abc-1234
+<span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;Status&gt;</span>
+OK
+<span class="nt">&lt;/Status&gt;</span>
+<span class="nt">&lt;/ystorewsbulk:ystorewsBulkResponse&gt;</span>
+</code></pre><h2 id='voidsale'>VoidSale</h2>
+<p>The VoidSale operation allows VoidSale entries corresponding to Sale entries to be submitted for pending
+batches, to negate the Sale upon batch submission. Please note that transactions cannot be voided after
+a batch has been submitted. VoidSale operations are available for FDMS transactions only.</p>
+
+<p><strong>REST based URL</strong>: https://<storeid>.payment.store.yahooapis.com/V1/orderlist/transactionlist</p>
+
+<p><strong>Method</strong>: POST</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Version</td>
+<td>String</td>
+<td>Required</td>
+<td>Request version</td>
+</tr>
+<tr>
+<td>StoreID</td>
+<td>String</td>
+<td>Required</td>
+<td>Store account name or number</td>
+</tr>
+<tr>
+<td>OrderID</td>
+<td>String</td>
+<td>Required</td>
+<td>Unique order number (identification value)</td>
+</tr>
+<tr>
+<td>TransactionID</td>
+<td>String</td>
+<td>Required</td>
+<td>Unique transaction number (identification value)</td>
+</tr>
+<tr>
+<td>Amount</td>
+<td>String</td>
+<td>Required</td>
+<td>Payment amount</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RequestID</td>
+<td>Unique request identification code</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Status of the request made</td>
+</tr>
+</tbody></table>
+
+<p>For error responses, please refer to the common error structure noted for section 4.</p>
+
+<blockquote>
+<p>Sample request XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorewsBulkRequest&gt;</span>
+<span class="nt">&lt;Version&gt;</span>1.0<span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span>fdms<span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;</span> <span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Verb&gt;</span>update<span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;OrderList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>485<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;TransactionList&gt;</span>
+<span class="nt">&lt;VoidSale&gt;</span>
+<span class="nt">&lt;TransactionID&gt;</span>fdms-485<span class="nt">&lt;/TransactionID&gt;</span>
+<span class="nt">&lt;/VoidSale&gt;</span>
+<span class="nt">&lt;/TransactionList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/OrderList&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsBulkRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorewsbulk:ystorewsBulkResponse</span> <span class="na">xmlns:ystorewsbulk=</span><span class="s">"urn:yahoo:sbs:ystorewsbulk"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span>
+abc-1234
+<span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;Status&gt;</span>
+OK
+<span class="nt">&lt;/Status&gt;</span>
+<span class="nt">&lt;/ystorewsbulk:ystorewsBulkResponse&gt;</span>
+</code></pre><h2 id='credit-2'>Credit</h2>
+<p>The Credit operation is used to initiate a credit for an order authorized via FDMS.
+REST based URL: https://<storeid>.payment.store.yahooapis.com/V1/orderlist/transactionlist</p>
+
+<p><strong>Method</strong>: POST</p>
+
+<p><strong>Request fields</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Valid Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Version</td>
+<td>String</td>
+<td>Required</td>
+<td>Request version</td>
+<td></td>
+</tr>
+<tr>
+<td>StoreID</td>
+<td>String</td>
+<td>Required</td>
+<td>Store account name or number</td>
+<td></td>
+</tr>
+<tr>
+<td>OrderID</td>
+<td>String</td>
+<td>Required</td>
+<td>Unique order number (identification value)</td>
+<td></td>
+</tr>
+<tr>
+<td>TransactionID</td>
+<td>String</td>
+<td>Required</td>
+<td>Unique transaction number (identification value)</td>
+<td></td>
+</tr>
+<tr>
+<td>Amount</td>
+<td>String</td>
+<td>Required</td>
+<td>Payment amount</td>
+<td></td>
+</tr>
+<tr>
+<td>Currency</td>
+<td>String</td>
+<td>Required</td>
+<td>Currency used (for example, USD)</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RequestID</td>
+<td>Unique request identification code</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Status of the request made</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Sample request XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorewsBulkRequest&gt;</span>
+<span class="nt">&lt;Version&gt;</span>1.0<span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span>fdms<span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;</span> <span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Verb&gt;</span>update<span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;OrderList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>485<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;TransactionList&gt;</span>
+<span class="nt">&lt;Credit&gt;</span>
+<span class="nt">&lt;TransactionID&gt;</span>fdms-485<span class="nt">&lt;/TransactionID&gt;</span>
+<span class="nt">&lt;AmountDetails&gt;</span>
+<span class="nt">&lt;Amount&gt;</span>1<span class="nt">&lt;/Amount&gt;</span>
+<span class="nt">&lt;Currency&gt;</span>USD<span class="nt">&lt;/Currency&gt;</span>
+<span class="nt">&lt;/AmountDetails&gt;</span>
+<span class="nt">&lt;/Credit&gt;</span>
+<span class="nt">&lt;/TransactionList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/OrderList&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsBulkRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorewsbulk:ystorewsBulkResponse</span> <span class="na">xmlns:ystorewsbulk=</span><span class="s">"urn:yahoo:sbs:ystorewsbulk"</span> <span class="nt">&gt;</span>
+<span class="nt">&lt;RequestID&gt;</span>
+abc-1234
+<span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;Status&gt;</span>
+OK
+<span class="nt">&lt;/Status&gt;</span>
+<span class="nt">&lt;/ystorewsbulk:ystorewsBulkResponse&gt;</span>
+</code></pre><h2 id='voidcredit'>VoidCredit</h2>
+<p>The VoidCredit operation allows VoidCredit entries corresponding to Credit (refund) entries to be submitted
+for pending batches. Please note that transactions cannot be voided after a batch has been submitted.
+VoidCredit operations are available for FDMS transactions only.</p>
+
+<p><strong>REST based URL</strong>: https://<storeid>.payment.store.yahooapis.com/V1/orderlist/transactionlist</p>
+
+<p><strong>Method</strong>: POST</p>
+
+<p><strong>Request fields</strong>:</p>
+
+<table><thead>
+<tr>
+<th>Request Field</th>
+<th>Type</th>
+<th>Cardinality</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Version</td>
+<td>Integer</td>
+<td>Required</td>
+<td>Request version</td>
+</tr>
+<tr>
+<td>StoreID</td>
+<td>Integer</td>
+<td>Required</td>
+<td>Store account name or number</td>
+</tr>
+<tr>
+<td>OrderID</td>
+<td>Integer</td>
+<td>Required</td>
+<td>Unique order number (identification value)</td>
+</tr>
+<tr>
+<td>TransactionID</td>
+<td>Integer</td>
+<td>Required</td>
+<td>Unique transaction number (identification value)</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RequestID</td>
+<td>Unique request identification code</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Status of the request made</td>
+</tr>
+</tbody></table>
+
+<p>For error responses, please refer to the common error structure noted for section 4.</p>
+
+<blockquote>
+<p>Sample request XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;ystorewsBulkRequest&gt;</span>
+<span class="nt">&lt;Version&gt;</span>1.0<span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;StoreID&gt;</span>fdms<span class="nt">&lt;/StoreID&gt;</span>
+<span class="nt">&lt;SecurityHeader&gt;</span>
+<span class="nt">&lt;PartnerStoreContractToken&gt;</span> <span class="nt">&lt;/PartnerStoreContractToken&gt;</span>
+<span class="nt">&lt;/SecurityHeader&gt;</span>
+<span class="nt">&lt;Verb&gt;</span>update<span class="nt">&lt;/Verb&gt;</span>
+<span class="nt">&lt;Version&gt;</span> 1.0 <span class="nt">&lt;/Version&gt;</span>
+<span class="nt">&lt;ResourceList&gt;</span>
+<span class="nt">&lt;OrderList&gt;</span>
+<span class="nt">&lt;Order&gt;</span>
+<span class="nt">&lt;OrderID&gt;</span>485<span class="nt">&lt;/OrderID&gt;</span>
+<span class="nt">&lt;TransactionList&gt;</span>
+<span class="nt">&lt;VoidCredit&gt;</span>
+<span class="nt">&lt;TransactionID&gt;</span>fdms-485<span class="nt">&lt;/TransactionID&gt;</span>
+<span class="nt">&lt;/VoidCredit&gt;</span>
+<span class="nt">&lt;/TransactionList&gt;</span>
+<span class="nt">&lt;/Order&gt;</span>
+<span class="nt">&lt;/OrderList&gt;</span>
+<span class="nt">&lt;/ResourceList&gt;</span>
+<span class="nt">&lt;/ystorewsBulkRequest&gt;</span>
+</code></pre>
+<blockquote>
+<p>Sample response XML:</p>
+</blockquote>
+<pre class="highlight xml tab-xml"><code><span class="nt">&lt;RequestID&gt;</span>
+abc-1234
+<span class="nt">&lt;/RequestID&gt;</span>
+<span class="nt">&lt;Status&gt;</span>
+OK
+<span class="nt">&lt;/Status&gt;</span>
+<span class="nt">&lt;/ystorewsbulk:ystorewsBulkResponse&gt;</span>
+</code></pre><h2 id='bulk-error-codes'>Bulk Error Codes</h2>
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>40002</td>
+<td>Specified Order is not associated with FDMS</td>
+</tr>
+<tr>
+<td>40007</td>
+<td>Error occurred processing the authorization. Please try again later.</td>
+</tr>
+<tr>
+<td>40009</td>
+<td>No custom order status has been added.</td>
+</tr>
+<tr>
+<td>40010</td>
+<td>Zero fields supplied for update.</td>
+</tr>
+<tr>
+<td>40010</td>
+<td>Status ID must be present in an update request.</td>
+</tr>
+<tr>
+<td>40011</td>
+<td>Status ID must not be present in a create request.</td>
+</tr>
+<tr>
+<td>40012</td>
+<td>Illegal custom status ID supplied in request.</td>
+</tr>
+<tr>
+<td>40013</td>
+<td>Reached maximum number of custom order statuses; Cannot add any more.</td>
+</tr>
+<tr>
+<td>40014</td>
+<td>Failed to add custom order status because of an internal error.</td>
+</tr>
+<tr>
+<td>40015</td>
+<td>No custom order status has been added.</td>
+</tr>
+<tr>
+<td>40016</td>
+<td>Zero fields supplied for update.</td>
+</tr>
+<tr>
+<td>40017</td>
+<td>Status ID must be present in an update request.</td>
+</tr>
+<tr>
+<td>40018</td>
+<td>Status ID must not be present in a create request.</td>
+</tr>
+<tr>
+<td>40019</td>
+<td>Illegal custom status ID supplied in request.</td>
+</tr>
+<tr>
+<td>40020</td>
+<td>Reached maximum number of custom order statuses; Cannot add any more.</td>
+</tr>
+<tr>
+<td>40021</td>
+<td>Failed to add custom order status because of an internal error.</td>
+</tr>
+<tr>
+<td>40022</td>
+<td>No custom order status has been added.</td>
+</tr>
+<tr>
+<td>40023</td>
+<td>Zero fields supplied for update.</td>
+</tr>
+<tr>
+<td>40100</td>
+<td>Status ID must be present in an update request.</td>
+</tr>
+<tr>
+<td>40101</td>
+<td>Status ID must not be present in a create request.</td>
+</tr>
+<tr>
+<td>40102</td>
+<td>Illegal custom status ID supplied in request.</td>
+</tr>
+<tr>
+<td>40103</td>
+<td>Reached maximum number of custom order statuses; Cannot add any more.</td>
+</tr>
+<tr>
+<td>40104</td>
+<td>Failed to add custom order status because of an internal error.</td>
+</tr>
+<tr>
+<td>40200</td>
+<td>No custom order status has been added.</td>
+</tr>
+<tr>
+<td>40200</td>
+<td>Zero fields supplied for update.</td>
+</tr>
+<tr>
+<td>40201</td>
+<td>Status ID must be present in an update request.</td>
+</tr>
+<tr>
+<td>40202</td>
+<td>Status ID must not be present in a create request.</td>
+</tr>
+<tr>
+<td>40203</td>
+<td>Illegal custom status ID supplied in request.</td>
+</tr>
+<tr>
+<td>40204</td>
+<td>Reached maximum number of custom order statuses; Cannot add any more.</td>
+</tr>
+<tr>
+<td>40205</td>
+<td>Failed to add custom order status because of an internal error.</td>
+</tr>
+<tr>
+<td>40300</td>
+<td>No custom order status has been added.</td>
+</tr>
+<tr>
+<td>40301</td>
+<td>Credit has already been voided for the given transaction..</td>
+</tr>
+<tr>
+<td>40302</td>
+<td>Credit is not possible for pending sale. You can do VoidCredit for this item.</td>
+</tr>
+<tr>
+<td>40303</td>
+<td>Given order has no Sale. You cannot credit without a sale.</td>
+</tr>
+<tr>
+<td>40304</td>
+<td>Credit is already complete for the given order.</td>
+</tr>
+<tr>
+<td>40305</td>
+<td>Credit not found for given order.</td>
+</tr>
+<tr>
+<td>40306</td>
+<td>Credit greater than sale amount is not allowed.</td>
+</tr>
+<tr>
+<td>40500</td>
+<td>Payment Gateway has returned an error. Please, check gateway errors for more details.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="XML">XML</a>
+                <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="javascript">javascript</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
